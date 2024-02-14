@@ -32,7 +32,7 @@ body::after {
     right: 0;
     bottom: 0;
     left: 0;
-    background: url('../wwwroot/watermark.png');
+    background: url('https://github.com/karenpayneoregon/flash-sessions/blob/37e6ee36231d6f722a7117f92f8607f39754eeb8/assets/watermark.png?raw=true');
     opacity: 0.3;
     pointer-events: none;
 }
