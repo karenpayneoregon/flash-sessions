@@ -33,7 +33,14 @@
 
         <div class="row" style="margin-top: 1em;">
             <div class="col-auto">
-                <button id="confirmationButton" class="btn btn-outline-dark">Confirm</button>
+                <button id="confirmationButton1" class="btn btn-outline-dark">Confirm</button>
+            </div>
+            <div class="col pt-2">Confirmation replacement</div>
+        </div>
+
+        <div class="row" style="margin-top: 1em;">
+            <div class="col-auto">
+                <button id="confirmationButton2" class="btn btn-outline-dark">Confirm</button>
             </div>
             <div class="col pt-2">Confirmation replacement</div>
         </div>
@@ -48,7 +55,6 @@
         </div>
     </div>
 
-    //  swal2-icon
 
     <script>
 
@@ -60,9 +66,13 @@
         });
 
         // Trigger for confirmation dialog
-        document.getElementById("confirmationButton").addEventListener("click", function () {
-            $SweetDialogs.TwoButtonQuestion();
+        document.getElementById("confirmationButton1").addEventListener("click", function () {
+            $SweetDialogs.Confirmation('My title','My message', 'Yes', 'No');
+        });
 
+        // Trigger for confirmation dialog
+        document.getElementById("confirmationButton2").addEventListener("click", function () {
+            $SweetDialogs.TwoButtonQuestion();
         });
 
     </script>

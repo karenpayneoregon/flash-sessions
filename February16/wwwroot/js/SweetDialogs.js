@@ -49,6 +49,9 @@ $SweetDialogs = function () {
             });
         })();
     };
+    /*
+     * This can be enhanced by passing in the title and text to display
+     */
     function GetConfirmation() {
         (async () => {
 
@@ -82,6 +85,39 @@ $SweetDialogs = function () {
         })();
     };
 
+    /*
+     * Variation of above, here title, message text and button text are passed in.
+     */
+    function Confirmation(title, message, yesText, noText) {
+        (async () => {
+
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    confirmButton: 'btn btn-primary',
+                    cancelButton: 'btn btn-primary'
+                },
+                buttonsStyling: false
+            });
+
+            swalWithBootstrapButtons.fire({
+                title: title,
+                html: message,
+                showCancelButton: true,
+                confirmButtonText: yesText,
+                cancelButtonText: noText,
+                allowOutsideClick: false,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // TODO remove for production, instead perform an action
+                    document.getElementById("_resultItem").value = 'Yes';
+                } else if (result.isDismissed) {
+                    // TODO remove for production, instead perform an action
+                    document.getElementById("_resultItem").value = 'No';
+                }
+            });
+        })();
+    };
+
     function messageBox(title, message) {
         (async () => {
 
@@ -104,6 +140,7 @@ $SweetDialogs = function () {
     return {
         ThreeButtonQuestion: ThreeButtonQuestion,
         TwoButtonQuestion: TwoButtonQuestion,
-        messageBox: messageBox
+        messageBox: messageBox,
+        Confirmation: Confirmation
     };
 }();
