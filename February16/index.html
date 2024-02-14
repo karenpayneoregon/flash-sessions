@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sweet alert samples</title>
+
+    <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!--  for custom dialogs-->
+    <link rel="stylesheet" href="wwwroot/lib/limonte-sweetalert2/sweetalert2.min.css" />
+    <script src="wwwroot/lib/limonte-sweetalert2/sweetalert2.all.min.js"></script>
+
+    <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--  for custom dialogs-->
+    <script language="javascript" src="wwwroot/js/SweetDialogs.js"></script>
+
+    <!--  for page specific, in this case styles e.g. H1 -->
+    <link rel="stylesheet" href="wwwroot/lib/site.css" />
+
+</head>
+<body>
+    <div class="container">
+
+
+        <h1>Flash session February 16, 2024</h1>
+
+        <div class="row">
+            <div class="col-auto">
+                <button id="messageBoxButton" class="btn btn-outline-dark">Message box</button>
+            </div>
+            <div class="col pt-2">This is a message box with a few options along with formatting.</div>
+        </div>
+
+        <div class="row" style="margin-top: 1em;">
+            <div class="col-auto">
+                <button id="confirmationButton" class="btn btn-outline-dark">Confirm</button>
+            </div>
+            <div class="col pt-2">Confirmation replacement</div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="d-flex justify-content-between">
+                <label class="required specialHighlight oed-required" for="_resultItem">Confirmation result</label>
+            </div>
+            <div class="col-2">
+                <input id="_resultItem" class="form-control mb-2" required />
+            </div>
+        </div>
+    </div>
+
+    //  swal2-icon
+
+    <script>
+
+        // Trigger for message box
+        document.getElementById("messageBoxButton").addEventListener("click", function () {
+            const title = '<span style="color: royalblue; font-weight: 700;text-shadow: 2px 4px 4px rgba(46,91,173,0.6);">Alert</span>';
+
+            $SweetDialogs.messageBox(title, 'This is an <strong>message</strong> to read.<br>Line 2');
+        });
+
+        // Trigger for confirmation dialog
+        document.getElementById("confirmationButton").addEventListener("click", function () {
+            $SweetDialogs.TwoButtonQuestion();
+
+        });
+
+    </script>
+</body>
+</html>
