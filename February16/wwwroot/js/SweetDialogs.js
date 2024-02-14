@@ -67,8 +67,9 @@ $SweetDialogs = function () {
                 title: 'Are you sure?',
                 html: "You <strong>won't</strong> be able to revert this!",
                 // Karen is not a fan of the icons
+                // icon below was picked at random
                 //icon: 'warning',
-                iconHtml: '<img src="wwwroot/images/OEDsmall.png">',
+                iconHtml: '<img src="wwwroot/images/light-bulbSmall.png">',
                 showCancelButton: true,
                 confirmButtonText: 'Yes, delete it!',
                 cancelButtonText: 'No, cancel!',
@@ -125,6 +126,7 @@ $SweetDialogs = function () {
                 title: title,
                 html: message,
                 //icon: 'info',
+                //iconHtml: '<img src="wwwroot/images/light-bulbSmall.png">',
                 width:'40em',
                 confirmButtonText: 'OK',
                 confirmButtonColor: "black",
