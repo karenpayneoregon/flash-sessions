@@ -37,3 +37,7 @@ body::after {
     opacity: 0.3;
     pointer-events: none;
 }
+
+.divider {
+    margin-top: 1em;
+}
