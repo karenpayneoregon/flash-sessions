@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sweet alert samples</title>
+
+    <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="wwwroot/lib/site.css" />
+
+    <!--suppress no favicon-->
+    <link rel="shortcut icon" href="#">
+    <style>
+        td {
+            padding-left: 0px !important
+        }
+        H1 {
+            width: 16.5em !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="fs-5 text-white bg-danger">Personal information (table)</h1>
+
+        <form id="main-content"
+              class="needs-validation was-validated"
+              novalidate=""
+              autocomplete="off">
+
+            <table class="table-sm" id="table1">
+                <tr>
+                    <td style="vertical-align: top;">
+                        <label for="txtFirstName" style="padding-right: 4px;">First Name:</label>
+                    </td>
+                    <td>
+                        <input type="text"
+                               class="form-control"
+                               id="txtFirstName"
+                               name="FirstName"
+                               value="Karen"
+                               required />
+                        <div class="invalid-feedback">Please enter your first name</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="vertical-align: top;">
+                        <label for="txtLastName">Last Name:</label>
+                    </td>
+                    <td>
+                        <input type="text"
+                               class="form-control"
+                               id="txtLastName"
+                               name="LastName"
+                               value="Payne"
+                               required />
+                        <div class="invalid-feedback">Please enter your last name</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary float-end mt-2" style="width: 10em" href="./index1.html" role="button">Submit</a>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>

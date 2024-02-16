@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sweet alert samples</title>
+
+    <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="wwwroot/lib/site.css" />
+
+    <!--suppress no favicon-->
+    <link rel="shortcut icon" href="#">
+    
+    <style>
+        H1 {
+            width: 16.5em !important;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="fs-5 text-white bg-black">Personal information (div)</h1>
+
+        <form id="main-content"
+              class="needs-validation was-validated mt-4"
+              novalidate=""
+              autocomplete="off">
+
+            <div class="row g-2 mb-2">
+                <div class="col-auto">
+                    <label for="txtFirstName" class="form-label">First Name:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text"
+                           class="form-control"
+                           id="txtFirstName"
+                           name="FirstName"
+                           value="Karen"
+                           required="">
+                    <div class="invalid-feedback">
+                        Please enter your first name
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-2 mb-2">
+                <div class="col-auto">
+                    <label for="txtLastName" class="form-label" style="padding-right: 2px">Last Name:</label>
+                </div>
+                <div class="col-auto">
+                    <input type="text"
+                           class="form-control"
+                           id="txtLastName"
+                           name="LastName"
+                           value="Payne"
+                           required="">
+                    <div class="invalid-feedback">
+                        Please enter your last name
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-0 p-0 m-0">
+                <div class="col-auto" style="width: 8.27em">
+                </div>
+                <div class="col-2 border" style="width: 12.18em">
+                    <a class="btn btn-primary float-end mt-2  me-2" style="width: 10em" href="./index.html" role="button">Submit</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
