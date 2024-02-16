@@ -130,13 +130,16 @@ $SweetDialogs = function () {
             Swal.fire({
                 title: title,
                 html: message,
+                //position: 'top-end',
                 //icon: 'info',
                 //iconHtml: '<img src="wwwroot/images/light-bulbSmall.png">',
-                width:'40em',
+                width:'20em',
                 confirmButtonText: 'OK',
-                confirmButtonColor: "black",
+                confirmButtonColor: "blue",
+                //confirmButtonClass: 'btn btn-outline-primary',
+                //buttonsStyling: false,
                 allowOutsideClick: false,
-                footer: '<span style="font-style: italic;font-size: 12px">OED 2024</span>'
+                //footer: '<span style="font-style: italic;font-size: 12px">OED 2024</span>'
             }).then((result) => {
                 if (result.isConfirmed) {
                     // do nothing

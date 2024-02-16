@@ -16,6 +16,7 @@ h1 {
 .no-border {
     border: 0;
 }
+
 .no-before-icon::before {
     display: none !important;
 }
@@ -41,3 +42,22 @@ body::after {
 .divider {
     margin-top: 1em;
 }
+
+legend {
+    background: black;
+    color: white;
+    border: solid 1px black;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+fieldset {
+    border: 1px solid #999;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #999;
+    width: 27em;
+}
+
