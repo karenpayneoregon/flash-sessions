@@ -74,7 +74,7 @@ $SweetDialogs = function () {
                 // Karen is not a fan of the icons
                 // icon below was picked at random
                 //icon: 'warning',
-                iconHtml: '<img src="wwwroot/images/light-bulbSmall.png">',
+                //iconHtml: '<img src="wwwroot/images/light-bulbSmall.png">',
                 showCancelButton: true,
                 confirmButtonText: 'Yes, delete it!',
                 cancelButtonText: 'No, cancel!',
@@ -135,7 +135,7 @@ $SweetDialogs = function () {
                 //iconHtml: '<img src="wwwroot/images/light-bulbSmall.png">',
                 width:'20em',
                 confirmButtonText: 'OK',
-                confirmButtonColor: "blue",
+                confirmButtonColor: "green",
                 //confirmButtonClass: 'btn btn-outline-primary',
                 //buttonsStyling: false,
                 allowOutsideClick: false,
