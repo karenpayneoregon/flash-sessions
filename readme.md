@@ -17,3 +17,7 @@ Projects a `vanilla HTML` using `Bootstrap 5x library` and on occasion a third-p
 
 - [Sweetalert](https://sweetalert2.github.io/) dialog replacement for alert and confirm for standard browsers.
 
+
+## Flash session February 23
+
+Tables verses divs
