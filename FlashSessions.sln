@@ -28,6 +28,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC4C0B39-2BFD-441F-97C4-1F1574C80F1C}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
+		information.md = information.md
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "February23", "February23\", "{E5D4A264-2B3F-482D-B97B-AEDA6E826909}"

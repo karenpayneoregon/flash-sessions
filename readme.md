@@ -4,6 +4,12 @@ Each week, a 15-minute topic is discussed for web development. Topics range from
 
 Projects a `vanilla HTML` using `Bootstrap 5x library` and on occasion a third-party library. The reason for plain HTML is that what is presented will work with ASP.NET Core, Razor Page and Cold Fusion.
 
+## See also
+
+[Information](information.md)
+
+
+
 > **Note**
 > For Bootstrap 4, minor changes will be needed.
 
