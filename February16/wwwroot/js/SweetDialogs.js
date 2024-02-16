@@ -1,6 +1,9 @@
 ﻿
 /*
- * DO NOT copy-n-paste as there is form specific code here
+ * This is a simple example of how to use SweetAlert2 to create a dialog box where there are various options like to
+ * show a native or user defined icon or no icon at all.
+ *
+ * DO NOT copy-n-paste as there is form specific code here, there are inline comments to help you understand the code.
  */
 
 var $SweetDialogs = $SweetDialogs || {};
@@ -34,10 +37,12 @@ $SweetDialogs = function () {
                 allowOutsideClick: false,
             }).then((result) => {
                 if (result.isConfirmed) {
+                    // next three lines are specific to this flash session
                     $("#_confirmation1").val(1);
                     document.getElementById("_resultItem").setAttribute('value', 'Confirmed from three buttons');
                     document.getElementById("form1").submit();
                 } else if (result.isDenied) {
+                    // next three lines are specific to this flash session
                     $("#_confirmation1").val(2);
                     document.getElementById("_resultItem").setAttribute('value', 'do not save from three buttons');
                     document.getElementById("form1").submit();
@@ -76,10 +81,10 @@ $SweetDialogs = function () {
                 allowOutsideClick: false,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    // TODO remove for production, instead perform an action
+                    // next line are specific to this flash session
                     document.getElementById("_resultItem").value = 'Okay';
                 } else if (result.isDismissed) {
-                    // TODO remove for production, instead perform an action
+                    // next line are specific to this flash session
                     document.getElementById("_resultItem").value = 'No';
                 } 
             });
@@ -109,10 +114,10 @@ $SweetDialogs = function () {
                 allowOutsideClick: false,
             }).then((result) => {
                 if (result.isConfirmed) {
-                    // TODO remove for production, instead perform an action
+                    // next line are specific to this flash session
                     document.getElementById("_resultItem").value = 'Yes';
                 } else if (result.isDismissed) {
-                    // TODO remove for production, instead perform an action
+                    // next line are specific to this flash session
                     document.getElementById("_resultItem").value = 'No';
                 }
             });
@@ -139,6 +144,11 @@ $SweetDialogs = function () {
             });
         })();
     };
+
+    /*
+     * This section defines which functions are publicly visible
+     * Also we can define an internal name for a function and a public name if desired
+     */
     return {
         ThreeButtonQuestion: ThreeButtonQuestion,
         TwoButtonQuestion: TwoButtonQuestion,
