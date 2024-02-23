@@ -2,27 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Sweet alert samples</title>
+    <title>With Div</title>
 
+    
     <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="wwwroot/lib/site.css" />
-
+    <link href="wwwroot/site1.css" rel="stylesheet" />
     <!--suppress no favicon-->
     <link rel="shortcut icon" href="#">
     
-    <style>
-        H1 {
-            width: 16.5em !important;
-        }
-    </style>
 
 </head>
 <body>
 
     <div class="container">
-
-        <h1 class="fs-5 text-white bg-black">Personal information (div)</h1>
+        
+        <div id="head">
+            <h1>Personal information <span>(div)</span></h1>
+        </div>
+        
 
         <form id="main-content"
               class="needs-validation was-validated mt-4"
@@ -30,9 +27,11 @@
               autocomplete="off">
 
             <div class="row g-2 mb-2">
+
                 <div class="col-auto">
                     <label for="txtFirstName" class="form-label">First Name:</label>
                 </div>
+
                 <div class="col-auto">
                     <input type="text"
                            class="form-control"

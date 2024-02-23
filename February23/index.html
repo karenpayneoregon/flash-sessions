@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Sweet alert samples</title>
+    <title>With table</title>
 
     <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
     <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="wwwroot/lib/site.css" />
+    <link href="wwwroot/site1.css" rel="stylesheet" />
 
     <!--suppress no favicon-->
     <link rel="shortcut icon" href="#">
+
     <style>
         td {
             padding-left: 0px !important
-        }
-        H1 {
-            width: 16.5em !important;
         }
     </style>
 </head>
@@ -23,7 +21,9 @@
 
     <div class="container">
 
-        <h1 class="fs-5 text-white bg-danger">Personal information (table)</h1>
+        <div id="head">
+            <h1>Personal information <span>(table)</span></h1>
+        </div>
 
         <form id="main-content"
               class="needs-validation was-validated"
@@ -31,10 +31,13 @@
               autocomplete="off">
 
             <table class="table-sm" id="table1">
+
                 <tr>
+
                     <td style="vertical-align: top;">
                         <label for="txtFirstName" style="padding-right: 4px;">First Name:</label>
                     </td>
+
                     <td>
                         <input type="text"
                                class="form-control"
@@ -47,9 +50,11 @@
                 </tr>
 
                 <tr>
+
                     <td style="vertical-align: top;">
                         <label for="txtLastName">Last Name:</label>
                     </td>
+
                     <td>
                         <input type="text"
                                class="form-control"
@@ -62,15 +67,18 @@
                 </tr>
 
                 <tr>
-                    <td>
-                    </td>
+
+                    <td></td>
                     <td>
                         <a class="btn btn-primary float-end mt-2" style="width: 10em" href="./index1.html" role="button">Submit</a>
                     </td>
+
                 </tr>
 
             </table>
+
         </form>
+
     </div>
 
 </body>
