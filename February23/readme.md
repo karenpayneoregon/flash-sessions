@@ -13,6 +13,8 @@ Screen readers when presented with a table will announce rows/columns and if a l
 
 ## Bootstrap
 
+Two versions, first done with table, second with div.
+
 ![figure](assets/figure4.png)
 
 ![figure](assets/figure3.png)
