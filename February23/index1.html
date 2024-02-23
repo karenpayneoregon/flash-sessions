@@ -4,25 +4,31 @@
     <meta charset="utf-8" />
     <title>With Div</title>
 
-    
     <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link href="wwwroot/site1.css" rel="stylesheet" />
+    <script src="wwwroot/lib/payne-debugger/debugHelper.js"></script>
+
     <!--suppress no favicon-->
     <link rel="shortcut icon" href="#">
-    
+
+    <style>
+        #main-content {
+            margin-top: .72em;
+        }
+    </style>
 
 </head>
 <body>
 
     <div class="container">
-        
+
         <div id="head">
             <h1>Personal information <span>(div)</span></h1>
         </div>
-        
+
 
         <form id="main-content"
-              class="needs-validation was-validated mt-4"
+              class="needs-validation was-validated"
               novalidate=""
               autocomplete="off">
 
@@ -66,12 +72,23 @@
                 <div class="col-auto" style="width: 8.27em">
                 </div>
                 <div class="col-2 border" style="width: 12.18em">
-                    <a class="btn btn-primary float-end mt-2  me-2" style="width: 10em" href="./index.html" role="button">Submit</a>
+                    <a class="btn btn-primary float-end mt-2 me-2" style="width: 10em" href="./index.html" role="button">Submit</a>
                 </div>
             </div>
 
         </form>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.addEventListener('keydown', function (event) {
+
+                if (event.key === '1' && event.altKey && event.ctrlKey) {
+                    $debugHelper.toggle();
+                }
+
+            });
+        });
+    </script>
 </body>
 </html>

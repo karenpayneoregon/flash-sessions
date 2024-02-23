@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
     <script src="wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link href="wwwroot/site1.css" rel="stylesheet" />
-
+    <script src="wwwroot/lib/payne-debugger/debugHelper.js"></script>
     <!--suppress no favicon-->
     <link rel="shortcut icon" href="#">
 
@@ -15,6 +15,8 @@
         td {
             padding-left: 0px !important
         }
+
+
     </style>
 </head>
 <body>
@@ -34,7 +36,7 @@
 
                 <tr>
 
-                    <td style="vertical-align: top;">
+                    <td class="vtop">
                         <label for="txtFirstName" style="padding-right: 4px;">First Name:</label>
                     </td>
 
@@ -51,7 +53,7 @@
 
                 <tr>
 
-                    <td style="vertical-align: top;">
+                    <td class="vtop">
                         <label for="txtLastName">Last Name:</label>
                     </td>
 
@@ -81,5 +83,16 @@
 
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.addEventListener('keydown', function (event) {
+
+                if (event.key === '1' && event.altKey && event.ctrlKey) {
+                    $debugHelper.toggle();
+                }
+
+            });
+        });
+    </script>
 </body>
 </html>
