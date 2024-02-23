@@ -10,6 +10,13 @@ Screen readers when presented with a table will announce rows/columns and if a l
         - Clicking on the label gives focus to the input
         - Screen readers will associate the label to the input
 
+
+## Bootstrap
+
+![figure](assets/figure4.png)
+
+![figure](assets/figure3.png)
+
 ## Bootstrap classes
 
 :heavy_check_mark: :fleur_de_lis: :flushed: :wink: :raised_back_of_hand:
