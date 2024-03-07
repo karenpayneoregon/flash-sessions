@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TODO</title>
+    <!--<link href="wwwroot/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />-->
+    <style>
+
+        .trStripe {
+            background-color: #cde0ee;
+        }
+
+        .star-required {
+            color: red;
+            font-size: .70em;
+        }
+
+        .star-ssn {
+            color: lawngreen;
+            font-size: .70em;
+        }
+
+        .form-control:focus {
+            border-color: greenyellow;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(173, 255, 47, 0.5);
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+
+
+<form class="ms-5 mt-2">
+    <table>
+        <tr class="trStripe">
+            <td align="right" colspan="2">
+                <i class="bi-star-fill bi-align-center star-required"></i>
+                <label for="pFirst_Name">First Name:</label>
+            </td>
+            <td align="left" colspan="2">
+                <input type="text" name="pFirst_Name" id="pFirst_Name" class="focus" value="" size="30" maxlength="30">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="right" colspan="2">
+                <label for="pMiddle_Name">Middle Name:</label>
+            </td>
+            <td align="left" colspan="2">
+                <input type="text" name="pMiddle_Name" id="pMiddle_Name" class="content" value="" size="15" maxlength="15">
+            </td>
+        </tr>
+
+        <tr class="trStripe">
+            <td align="right" colspan="2">
+                <i class="bi-star-fill bi-align-center star-required"></i>
+                <label for="pLast_Name">Last Name:</label>
+            </td>
+            <td align="left" colspan="2">
+                <input type="text" name="pLast_Name" id="pLast_Name" class="form-control" value="" size="30" maxlength="30">
+            </td>
+        </tr>
+
+        <tr class="trStripe">
+            <td colspan="2" align="right">
+                <!--<img src="includes/images/star42.gif" alt="field is required" class="required_field">-->
+                <i class="bi-star-fill bi-align-center star-required"></i>
+                <label for="pPassQues1_ID">Select security question #1:</label>
+            </td>
+            <td colspan="2" align="left">
+                <select name="pPassQues1_ID" id="pPassQues1_ID" size="1">
+
+                    <option value="">-- Select --</option>
+
+                    <option value="1">What is your Mother's Maiden Name?</option>
+
+                    <option value="2">What was the name of your first pet?</option>
+
+                    <option value="3">What was the last name of your first grade teacher?</option>
+
+                    <option value="4">What was your childhood nickname?</option>
+
+                    <option value="5">In what city or town did you meet your spouse/significant other?</option>
+
+                    <option value="6">What is the name of your favorite childhood friend?</option>
+
+                    <option value="7">What street did you live on in third grade?</option>
+
+                    <option value="8">What is your oldest sibling's birthday month and year? </option>
+
+                    <option value="9">What is the middle name of your youngest child?</option>
+
+                    <option value="10">What is your oldest sibling's middle name?</option>
+
+                    <option value="11">What school did you attend for sixth grade?</option>
+
+                    <option value="12">In what city or town did your mother and father meet? </option>
+
+                    <option value="13">Who was the US President the year that you were born?</option>
+
+                    <option value="15">What was the last name of your third grade teacher?</option>
+
+                    <option value="16">Where does your nearest sibling live?</option>
+
+                    <option value="17">What is your youngest brother's birthday?</option>
+
+                    <option value="18">What was the name of your elementary / primary school?</option>
+
+                    <option value="19">In what city or town was your first job?</option>
+
+                    <option value="20">What is your favorite pet's name?</option>
+
+                    <option value="21">What is your favorite teacher's name?</option>
+
+                    <option value="22">What is your dream career?</option>
+
+                    <option value="23">What is your hobby?</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    </form>
+
+</body>
+</html>

@@ -75,6 +75,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "March1", "March1\", "{B9042
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "March8", "March8\", "{0A7F8182-EBF5-4577-A610-B2193C8384DD}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_63857"
+		Debug.AspNetCompiler.PhysicalPath = "March8\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63857\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_63857"
+		Release.AspNetCompiler.PhysicalPath = "March8\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63857\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63857"
+		SlnRelativePath = "March8\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +108,8 @@ Global
 		{E5D4A264-2B3F-482D-B97B-AEDA6E826909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B90422F5-59F9-4854-8495-8817015F41BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B90422F5-59F9-4854-8495-8817015F41BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A7F8182-EBF5-4577-A610-B2193C8384DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A7F8182-EBF5-4577-A610-B2193C8384DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
