@@ -37,6 +37,8 @@ What if an input does not have an `id`, assign an `id`, make sure the `id` is un
 | inputElements.html | Shows how to setup a label associated with an input for first and last name. |  |
 | radioCheckButtons.html | This page shows how to associate check box and radio button with a label | CheckBoxes and RadioButton  |
 | selectElement.html | Demonstrates associating a label to a select element |  |
+| multipleInputsOneLabel | One label multiple inputs |  |
+| inputExperiment.html | :small_orange_diamond: | Karen's experiments |
 |  |  |  |
 
 ## Exceptions to the above rules
