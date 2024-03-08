@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<link href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />-->
+    <style>
+
+        input[required], select[required] {
+            background-image: url('wwwroot/images/redStar1.png');
+            background-repeat: no-repeat;
+            background-position-x: right;
+        }
+
+        fieldset {
+            border:1px solid #999;
+            border-radius:8px;
+            box-shadow:0 0 5px #999;
+        }
+        legend {
+            background:#fff;
+        }
+
+        label {
+            display: block
+        }
+
+
+
+        .divTable{
+            display: table;
+            width: 345px;
+        }
+        .divTableRow {
+            display: table-row;
+        }
+
+        .divTableCell_left{
+            display: table-cell;
+            padding: 3px 0px;
+            width: 30px;
+            text-align: end;
+        }
+
+        .divTableCell_right{
+            display: table-cell;
+            padding: 3px 10px;
+            width: 110px;
+
+        }
+        .divTableBody {
+            display: table-row-group;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>An example for formatting</h1>
+
+    <!-- See https://divtable.com/converter/ -->
+
+    <form>
+
+        <fieldset style="width: 345px">
+            <legend>Personal information</legend>
+
+            <label for="firstName">First Name</label>
+            <input id="firstName" style="width: 100px" maxlength="25" required>
+
+            <label for="lastName">Last Name</label>
+            <input id="lastName" style="width: 100px" maxlength="25" required>
+        </fieldset>
+
+
+        <fieldset style="width: 250px; margin-top: 10px;">
+            <legend>Personal information</legend>
+            <div class="divTable">
+                <div class="divTableBody">
+                    <div class="divTableRow">
+                        <div class="divTableCell_left"><label for="firstName1">First Name</label></div>
+                        <div class="divTableCell_right"><input id="firstName1" style="width: 100px" maxlength="25" required></div>
+                    </div>
+                    <div class="divTableRow">
+                        <div class="divTableCell_left"><label for="lastName1">Last Name</label></div>
+                        <div class="divTableCell_right"><input id="lastName1" style="width: 100px" maxlength="25" required></div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+
+    </form>
+</body>
+</html>
