@@ -60,4 +60,7 @@ There are two options
 
 ## Testing
 
-Once a page has been completed, view the page, click on each label to ensure focus is set to the proper input.
+Once a page has been completed:
+
+- View the page, click on each label to ensure focus is set to the proper input.
+- Run an automated testing tool (Karen can assist with this).
