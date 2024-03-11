@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="wwwroot/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <style>
+        .wrapper {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+
+            .wrapper input {
+                padding-right: 14px;
+            }
+
+            .wrapper:after {
+                content: "*";
+                position: absolute;
+                right: 5px;
+                top: +3px;
+                color: red;
+                z-index: 5;
+            }
+    </style>
+</head>
+<body>
+    <!-- Tinkering -->
+    <div class="container">
+        <form>
+            <div class="wrapper">
+                <input type="text" class="form-control" />
+            </div>
+            <div class="row mt-2">
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+
+</body>
+</html>
