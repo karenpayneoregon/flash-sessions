@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: "Open Sans";
+        }
+
+        input[type="radio"] {
+            margin-left: 20px;
+            border: 1px solid #888;
+        }
+
+        fieldset {
+            padding-left: .5em !important;
+            padding-right: .5em !important;
+            padding-bottom: .5em !important;
+        }
+
+        legend {
+            background: #FFFACD;
+            border: solid 1px black;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            margin-left: 15px;
+            font-size: 14px !important;
+        }
+
+        #main {
+            margin-top: 1em;
+            margin-left: 1em;
+            width: 22em;
+        }
+    </style>
+
+    <link href="wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <body>
+        
+        <div class="container mt-5">
+            <div class="alert alert-primary" role="alert">
+                <h1 class="fs-5">Radio</h1>
+            </div>
+
+
+            <form id="radioSelect">
+
+                <div id="main">
+
+                    <fieldset id="mainFieldset" class="border border-dark rounded-3 shadow">
+
+                        <legend class="float-none w-auto px-1" id="description">
+                            <span class="fw-bold ledgendSpan">Select Font Size:</span>
+                        </legend>
+
+                        <label>Options:</label>
+                        <input type="radio"
+                               name="radSize"
+                               id="sizeSmall"
+                               value="small"
+                               checked="checked" />
+                        <label for="sizeSmall">Small</label>
+
+                        <input type="radio"
+                               name="radSize"
+                               id="sizeMed"
+                               value="medium" />
+                        <label for="sizeMed">Medium</label>
+
+                        <input type="radio"
+                               name="radSize"
+                               id="sizeLarge"
+                               value="large" />
+                        <label for="sizeLarge">Large</label>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+
+
+
+    </body>
+</body>
+</html>
