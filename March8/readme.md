@@ -39,7 +39,7 @@ What if an input does not have an `id`, assign an `id`, make sure the `id` is un
 | selectElement.html | Demonstrates associating a label to a select element |  |
 | multipleInputsOneLabel | One label multiple inputs |  |
 | inputExperiment.html | :small_orange_diamond: | Karen's experiments |
-|  |  |  |
+| radioButtons.html | radio buttons only |  |
 
 ## Exceptions to the above rules
 

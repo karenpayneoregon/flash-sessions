@@ -44,7 +44,7 @@
 </head>
 <body>
     <body>
-        
+
         <div class="container mt-5">
             <div class="alert alert-primary" role="alert">
                 <h1 class="fs-5">Radio</h1>
@@ -82,11 +82,26 @@
                         <label for="sizeLarge">Large</label>
                     </fieldset>
                 </div>
+
+                <div class="row mt-5">
+                    <div class="col-auto">
+                        <button class="btn btn-outline-dark" type="submit">Post</button>
+                    </div>
+                </div>
             </form>
         </div>
+        
+    <script>
+        let submitBtn = document.querySelector('button[type="submit"]');
 
-
-
+        submitBtn.addEventListener('click', function(event){
+            event.preventDefault();
+            const selectedOption = document.querySelector('input[type="radio"][name="radSize"]:checked');
+            if(selectedOption && selectedOption.value){
+                console.log(`Selected: ${selectedOption.value}`);
+            }
+        });
+    </script>
     </body>
-</body>
+
 </html>
