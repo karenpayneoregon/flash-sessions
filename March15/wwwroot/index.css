@@ -1,0 +1,74 @@
+[aria-level="1"] {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: crimson;
+    text-align: center;
+}
+
+h1 span {
+    border-top: solid crimson;
+    border-bottom: solid crimson;
+}
+
+[aria-level="2"] {
+    font-weight: bold;
+    font-size: 1em;
+    color: navy;
+    text-align: center;
+}
+
+h2 span {
+    border-top: solid navy;
+    border-bottom: solid navy;
+}
+
+[aria-level="3"] {
+    font-weight: bold;
+    font-size: .75em;
+    color: white;
+    text-align: center;
+    
+}
+
+h3 span {
+    border-top: solid black;
+    border-bottom: solid black;
+    background-color: green;
+}
+
+a[target="_blank"]::after {
+    content: "";
+    width: 1em;
+    height: 1em;
+    margin: 0 0.05em 0 0.1em;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ij48cGF0aCBkPSJNOSAyTDkgMyAxMi4zIDMgNiA5LjMgNi43IDEwIDEzIDMuNyAxMyA3IDE0IDcgMTQgMlpNNCA0QzIuOSA0IDIgNC45IDIgNkwyIDEyQzIgMTMuMSAyLjkgMTQgNCAxNEwxMCAxNEMxMS4xIDE0IDEyIDEzLjEgMTIgMTJMMTIgNyAxMSA4IDExIDEyQzExIDEyLjYgMTAuNiAxMyAxMCAxM0w0IDEzQzMuNCAxMyAzIDEyLjYgMyAxMkwzIDZDMyA1LjQgMy40IDUgNCA1TDggNSA5IDRaIi8+PC9zdmc+) no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.visually-hidden {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+    clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+    white-space: nowrap; /* added line to stop words getting mushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+}
+
+hr.style1 {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+
+

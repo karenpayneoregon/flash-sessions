@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
         body {
             font-family: "Open Sans";
         }
@@ -15,14 +16,13 @@
         }
 
         fieldset {
-            padding-left: .5em !important;
+            padding-left: .2em !important;
             padding-right: .5em !important;
             padding-bottom: .5em !important;
         }
 
         legend {
-            background: gainsboro;
-            opacity: 0.5;
+            background: darkseagreen;
             border: solid 1px black;
             -webkit-border-radius: 8px;
             -moz-border-radius: 8px;
@@ -36,7 +36,7 @@
         #main {
             margin-top: 1em;
             margin-left: 1em;
-            width: 22em;
+            width: 18em;
         }
     </style>
 
@@ -56,35 +56,36 @@
 
                 <div id="main">
 
-                    <fieldset id="mainFieldset" class="border border-dark rounded-3 shadow">
+                    <fieldset id="mainFieldset" class="border border-dark rounded-3 shadow-sm">
 
                         <legend class="float-none w-auto px-1" id="description">
-                            <span class="fw-bold ledgendSpan">Select Font Size:</span>
+                            <span class="fw-bold">Select Font Size</span>
                         </legend>
 
 
                         <input type="radio"
                                name="radioGroupSize"
                                id="sizeSmall"
-                               value="small"
-                               checked="checked" />
+                               value="Small" />
                         <label for="sizeSmall">Small</label>
 
                         <input type="radio"
                                name="radioGroupSize"
                                id="sizeMed"
-                               value="medium" />
+                               value="Medium" />
                         <label for="sizeMed">Medium</label>
 
                         <input type="radio"
                                name="radioGroupSize"
                                id="sizeLarge"
-                               value="large" />
+                               value="Large" />
+
                         <label for="sizeLarge">Large</label>
+
                     </fieldset>
                 </div>
 
-                <div class="row mt-5 ms-2">
+                <div class="row mt-3 ms-2">
                     <div class="col-auto">
                         <button class="btn btn-outline-dark" type="submit">Post</button>
                     </div>
@@ -95,21 +96,29 @@
 
             </form>
         </div>
-        
-    <script>
 
-        let submitBtn = document.querySelector('button[type="submit"]');
-        let resultsDiv = document.getElementById('results');
+        <script>
 
-        submitBtn.addEventListener('click', function(event){
-            event.preventDefault();
-            const selectedOption = document.querySelector('input[type="radio"][name="radioGroupSize"]:checked');
-            if(selectedOption && selectedOption.value){
-                resultsDiv.innerHTML = `<p>Selected: ${selectedOption.value}</p>`;
-            }
-        });
 
-    </script>
+            let submitButton = document.querySelector('button[type="submit"]');
+            let resultsDiv = document.getElementById('results');
+
+            submitButton.addEventListener('click',
+                function(event) {
+
+                    event.preventDefault();
+
+                    const selectedOption = document.querySelector('input[type="radio"][name="radioGroupSize"]:checked');
+                    if (selectedOption && selectedOption.value) {
+                        resultsDiv.innerHTML = `Selected: <strong>${selectedOption.value}</strong>`;
+                    }
+                });
+
+            document.addEventListener("DOMContentLoaded",
+                () => {
+                    document.getElementById("sizeMed").checked = true;
+                });
+        </script>
     </body>
 
 </html>
