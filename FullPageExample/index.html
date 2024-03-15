@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Elements layout</title>
+    <link href="wwwroot/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="wwwroot/site.css" rel="stylesheet" />
+    <script src="wwwroot/lib/payne-debugger/debugHelper.js"></script>
+    <script src="wwwroot/spokenLanguages.js"></script>
+</head>
+<body>
+
+
+    <div class="alert alert-primary" role="alert">
+        <h1 class="fs-5">Practice form</h1>
+    </div>
+
+    <div class="container">
+
+        <form id="personal_details_form" class="form-group w-75">
+
+            <fieldset class="border border-dark p-3 shadow">
+
+                <legend class="float-none w-auto px-1" id="description">
+                    <span class="fw-bold ps-1 pe-1">Personal information</span>
+                </legend>
+
+                <label for="firstName">First Name:</label>
+                <input name="firstName"
+                       class="form-control w-75 mb-1"
+                       id="firstName" type="text"
+                       autocomplete="given-name">
+
+                <label for="lastName">Last Name:</label>
+                <input name="lastName"
+                       class="form-control w-75 mb-1"
+                       id="lastName" type="text"
+                       autocomplete="family-name">
+
+                <label for="email">Email:</label>
+                <input name="email"
+                       class="form-control w-75 mb-1"
+                       id="email"
+                       type="email">
+
+                <div class="d-flex justify-content-between">
+                    <label for="spoken_language" class="required">Language</label>
+                </div>
+
+                <div class="row">
+                    <div class="col-auto">
+                        <select id="spoken_language"
+                                name="spoken_language"
+                                class="form-select mb-2"
+                                aria-label="current state"
+                                required>
+                        </select>
+                    </div>
+                </div>
+
+            </fieldset>
+
+
+            <fieldset class="border border-dark p-3 shadow mt-4">
+
+                <legend class="float-none w-auto px-1" id="resident">
+                    <span class="fw-bold ps-1 pe-1">Oregon resident</span>
+                </legend>
+
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="radio"
+                           name="is_resident"
+                           id="oregon_resident_yes"
+                           value="option1">
+
+                    <label class="form-check-label" for="oregon_resident_yes">Yes</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="radio"
+                           name="is_resident"
+                           id="oregon_resident_no"
+                           value="option2">
+
+                    <label class="form-check-label" for="oregon_resident_no">No</label>
+                </div>
+
+
+                <div class="form-check">
+
+                    <input class="form-check-input"
+                           type="checkbox" value=""
+                           id="verifyCheckbox">
+
+                    <label class="form-check-label" for="verifyCheckbox">
+                        Verify this information is correct
+                    </label>
+                </div>
+
+            </fieldset>
+
+
+            <div class="container-fluid d-flex justify-content-end mt-4 mb-5">
+                <button type="button"
+                        id="reset_button"
+                        class="btn btn-outline-secondary btn-lg me-2">
+                    Cancel
+                </button>
+
+                <button type="button" 
+                        id="convert_button" 
+                        class="btn btn-primary btn-lg">
+                    Submit
+                </button>
+            </div>
+
+        </form>
+
+
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            var selectElement = document.getElementById('spoken_language');
+            spokenLanguageList().map(item => selectElement.appendChild(new Option(item.name, item.code)).cloneNode(true));
+            selectElement.value = 'en';
+
+        });
+        document.addEventListener('keydown', function (event) {
+
+            if (event.key === '1' && event.altKey && event.ctrlKey) {
+                $debugHelper.toggle();
+            }
+
+        });
+    </script>
+</body>
+</html>
