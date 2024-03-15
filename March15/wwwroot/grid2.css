@@ -58,6 +58,8 @@ legend {
     padding: 5px;
 }
 
+
+
 a[target="_blank"]::after {
     content: "";
     width: 1em;
