@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap version</title>
+    <link href="wwwroot/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="wwwroot/lib/payne-debugger/debugHelper.js"></script>
+
+    <link href="wwwroot/grid2.css" rel="stylesheet" />
+
+</head>
+<body>
+    <h1><span>CSS Grid</span></h1>
+    <div class="container">
+        <form style="width: 350px" role="main">
+            <fieldset class="border border-dark p-3">
+                <legend class="float-none w-auto fs-6">Personal information</legend>
+                <div class="mb-3">
+                    <label for="first_name" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="first_name">
+                </div>
+                <div class="mb-3">
+                    <label for="last_name" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="last_name">
+                </div>
+            </fieldset>
+
+        </form>
+    </div>
+
+    <div style="margin-top: 1em; text-align: center;">
+        What is the Difference Between <a href="https://css3.com/what-is-the-difference-between-css-grid-and-flexbox-a-stylish-duel/"
+                                          aria-label="Learn more about CSS grid and Flexbox"
+                                          target="_blank">
+            CSS Grid and Flexbox?<span class="visually-hidden">
+                (opens in new window)
+            </span>
+        </a>
+    </div>
+
+
+    <hr class="style1" />
+
+    <hr />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.addEventListener('keydown', function (event) {
+
+                if (event.key === '1' && event.altKey && event.ctrlKey) {
+                    $debugHelper.toggle();
+                }
+
+            });
+        });
+    </script>
+</body>
+</html>

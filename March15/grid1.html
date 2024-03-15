@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple grid</title>
+    <script src="wwwroot/lib/payne-debugger/debugHelper.js"></script>
+    <!--suppress no favicon-->
+    <link rel="shortcut icon" href="#">
+
+    <link href="wwwroot/grid1.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <h1><span>CSS Grid</span></h1>
+
+    <div class="container">
+
+        <fieldset role="main">
+            <legend class="float-none w-auto px-1" id="description">
+                <span class="fw-bold">Personal information</span>
+            </legend>
+            <div class="wrapper">
+                <div><label for="pFirst_Name">First name</label></div>
+                <div><input id="pFirst_Name" type="text" autofocus /></div>
+                <div><label for="plast_Name">Last name</label></div>
+                <div><input id="plast_Name" type="text" /></div>
+            </div>
+        </fieldset>
+    </div>
+
+    <div style="margin-top: 1em; text-align: center;">
+        What is the Difference Between <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level"
+                                          aria-label="Learn more about CSS grid and Flexbox"
+                                          target="_blank">
+            CSS Grid and Flexbox?<span class="visually-hidden">
+                (opens in new window)
+            </span>
+        </a>
+    </div>
+
+
+    <hr class="style1" />
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.addEventListener('keydown', function (event) {
+
+                if (event.key === '1' && event.altKey && event.ctrlKey) {
+                    $debugHelper.toggle();
+                }
+
+            });
+        });
+    </script>
+</body>
+</html>
