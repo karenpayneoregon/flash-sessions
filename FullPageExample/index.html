@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>Elements layout</title>
@@ -7,6 +7,7 @@
     <link href="wwwroot/site.css" rel="stylesheet" />
     <script src="wwwroot/lib/payne-debugger/debugHelper.js"></script>
     <script src="wwwroot/spokenLanguages.js"></script>
+    <script src="wwwroot/unitedStates.js"></script>
 </head>
 <body>
 
@@ -102,19 +103,130 @@
 
             </fieldset>
 
+            <fieldset class="border border-dark p-3 shadow mt-4">
+
+                <!--
+                inputs in this section are set up better for sizing of elements than sections above
+                the reason, you will encounter a lot of forms that are not set up well for the user
+                -->
+
+                <legend class="float-none w-auto px-1" id="current_address2">
+                    <span class="fw-bold ps-1 pe-1">Current residence</span>
+                </legend>
+
+                <div class="row">
+
+                    <div class="d-flex justify-content-between">
+                        <label for="current_address1" class="oed-required">Street</label>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <input id="current_address1"
+                                   name="current_address1"
+                                   type="text"
+                                   class="form-control mb-2"
+                                   aria-label="current address"
+                                   required />
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="row">
+
+                        <div class="col-lg-6">
+                            <input id="steet_line2"
+                                   name="current_address1"
+                                   type="text"
+                                   class="form-control mb-2"
+                                   aria-label="line two of current address which is optional" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="d-flex justify-content-between">
+                        <label for="current_city" class="oed-required">City</label>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-3">
+                            <input id="current_city"
+                                   name="current_city"
+                                   type="text"
+                                   class="form-control mb-2"
+                                   aria-label="current city"
+                                   required />
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="d-flex justify-content-between">
+                        <label for="current_state" class="oed-required">State</label>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-2">
+
+                            <select id="current_state"
+                                    name="current_state"
+                                    class="form-select mb-2"
+                                    style="width: 9em;"
+                                    aria-label="current state"
+                                    required>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="d-flex justify-content-between">
+                        <label for="current_zip" class="oed-required">Zip code</label>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-auto">
+                            <input id="current_zip"
+                                   name="current_zip"
+                                   type="text"
+                                   class="form-control mb-2"
+                                   aria-label="current zip code"
+                                   required />
+                        </div>
+
+                    </div>
+                </div>
+
+            </fieldset>
+
 
             <div class="container-fluid d-flex justify-content-end mt-4 mb-5">
+
                 <button type="button"
                         id="reset_button"
                         class="btn btn-outline-secondary btn-lg me-2">
                     Cancel
                 </button>
 
-                <button type="button" 
-                        id="convert_button" 
+                <button type="button"
+                        id="convert_button"
                         class="btn btn-primary btn-lg">
                     Submit
                 </button>
+
             </div>
 
         </form>
@@ -124,13 +236,30 @@
 
     <script>
 
+        /*
+         * Load two select elements for spoken language and state then set default values.
+         */
         document.addEventListener("DOMContentLoaded", () => {
 
             var selectElement = document.getElementById('spoken_language');
             spokenLanguageList().map(item => selectElement.appendChild(new Option(item.name, item.code)).cloneNode(true));
             selectElement.value = 'en';
 
+            var stateSelectElement = document.getElementById('current_state');
+            states().map(item => stateSelectElement.appendChild(new Option(item.name, item.code)).cloneNode(true));
+            stateSelectElement.value = 'OR';
+
         });
+
+        /*
+         *
+         * The following code is for debugging purposes only which
+         * allows a style sheet to be loaded to show the grid layout
+         * and layout of each element.
+         *
+         * Press ctrl + alt + 1 to toggle the grid layout.
+         *
+         */
         document.addEventListener('keydown', function (event) {
 
             if (event.key === '1' && event.altKey && event.ctrlKey) {
