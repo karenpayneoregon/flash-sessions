@@ -141,6 +141,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FullPageExample", "FullPage
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BootstrapSplitButtonWithJavaScript", "BootstrapSplitButtonWithJavaScript\", "{23609DAB-9DAE-46E2-A4F4-63C2D1509176}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58026"
+		Debug.AspNetCompiler.PhysicalPath = "BootstrapSplitButtonWithJavaScript\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58026\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58026"
+		Release.AspNetCompiler.PhysicalPath = "BootstrapSplitButtonWithJavaScript\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58026\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "58026"
+		SlnRelativePath = "BootstrapSplitButtonWithJavaScript\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +193,10 @@ Global
 		{639401CC-C034-4D77-9577-8808EB0AF177}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{639401CC-C034-4D77-9577-8808EB0AF177}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{639401CC-C034-4D77-9577-8808EB0AF177}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{23609DAB-9DAE-46E2-A4F4-63C2D1509176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23609DAB-9DAE-46E2-A4F4-63C2D1509176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23609DAB-9DAE-46E2-A4F4-63C2D1509176}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{23609DAB-9DAE-46E2-A4F4-63C2D1509176}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

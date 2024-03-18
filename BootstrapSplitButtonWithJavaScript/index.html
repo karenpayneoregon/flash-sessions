@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split button</title>
+    <!--suppress no favicon-->
+    <link rel="shortcut icon" href="#">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <h1 class="fs-5 text-center">Actions for dropdown from button</h1>
+    <div class="container mt-5">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select Action
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" data-type="1" href="#">Action</a></li>
+                <li><a class="dropdown-item" data-type="2" href="#">Another action</a></li>
+                <li><a class="dropdown-item" data-type="3" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.addEventListener("click", function (evt) {
+                if (evt.target.tagName === "A") {
+                    switch (evt.target.getAttribute("data-type")) {
+                        case '1':
+                            console.log('1 action');
+                            break;
+                        case '2':
+                            console.log('2 action');
+                            break;
+                        case '3':
+                            console.log('3 actions');
+                            break;
+                        default:
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
