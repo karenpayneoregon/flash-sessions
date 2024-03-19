@@ -1,0 +1,71 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color:aliceblue;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 380px
+}
+
+.card {
+    border-radius: 8px;
+    transition: .25s;
+}
+
+.card:hover {
+    transition: .25s;
+}
+
+.input-container {
+    /*background-color: #ebebeb;*/
+    /*border: none;*/
+    transition: .25s;
+    padding-left: 8px;
+    font-weight: light !important;
+    font-family: "Times New Roman", Times, serif;
+    margin-bottom: .25em;
+    margin-top: .25em;
+    border-radius: 4px;
+}
+
+    .input-container:hover {
+        transition: .25s;
+        /*background-color: darkseagreen;*/
+    }
+
+.input-container:focus {
+    background-color: #ebebeb;
+    box-shadow: 0 8px 8px 0px #f1f1f1;
+}
+
+.new-account {
+    transition: .25s;
+    padding-bottom: 4px;
+    border-bottom: 2px solid gray;
+    color: #212519;
+}
+
+.new-account:hover {
+    border-bottom: 2px solid green;
+    padding-bottom: 8px;
+    transition: .25s;
+    text-decoration: none;
+    color: #212519;
+}
+
+.btn-sm {
+    font-weight: 300;
+}
+
+.btn-sm:hover {
+    font-weight: 900;
+}

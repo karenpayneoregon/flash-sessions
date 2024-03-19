@@ -163,6 +163,28 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BootstrapSplitButtonWithJav
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LoginDialogSample", "LoginDialogSample\", "{35F0788C-103C-450C-AA5F-13D124FB6965}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51317"
+		Debug.AspNetCompiler.PhysicalPath = "LoginDialogSample\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51317\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51317"
+		Release.AspNetCompiler.PhysicalPath = "LoginDialogSample\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51317\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51317"
+		SlnRelativePath = "LoginDialogSample\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -197,6 +219,10 @@ Global
 		{23609DAB-9DAE-46E2-A4F4-63C2D1509176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23609DAB-9DAE-46E2-A4F4-63C2D1509176}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{23609DAB-9DAE-46E2-A4F4-63C2D1509176}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{35F0788C-103C-450C-AA5F-13D124FB6965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F0788C-103C-450C-AA5F-13D124FB6965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F0788C-103C-450C-AA5F-13D124FB6965}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F0788C-103C-450C-AA5F-13D124FB6965}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

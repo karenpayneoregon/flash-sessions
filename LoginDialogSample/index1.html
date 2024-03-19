@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="wwwroot/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Refactored login</title>
+    <style>
+
+        </style>
+    <link href="css/index1.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--
+    Original version
+    https://codepen.io/lotusorb/pen/NQrvPw
+    -->
+
+    <div class="container">
+
+        <div class="row mt-5">
+
+            <div class="login-container mx-auto">
+                <div class="card px-4 py-5 border-0 shadow">
+
+                    <div class="d-inline text-left mb-3">
+                        <h1 class="fw-bold fs-4">Login</h1>
+                    </div>
+
+                    <label for="user_name">User name</label>
+
+                    <div class="d-inline text-center mb-0">
+
+                        <div class="mx-auto">
+                            <input id="user_name" class="form-control input-container" type="text">
+                        </div>
+
+                    </div>
+
+                    <label for="user_pass">Password</label>
+                    <div class="d-inline text-center mb-3">
+
+                        <div class="form-group mx-auto">
+                            <input id="user_pass" class="form-control input-container" type="password">
+                        </div>
+
+                    </div>
+
+                    <div class="d-inline text-start mb-3">
+
+                        <div class="mx-auto">
+                            <button id="go" class="btn btn-primary">Confirm</button>
+                            <button id="nope" class="btn btn-secondary">Cancel</button>
+                            <a class="small text-black-50 ps-2 ms-2 border-left" href="">Forgot Password ?</a>
+                        </div>
+
+                    </div>
+
+                    <div class="d-inline text-left mt-3">
+
+                        <div class="mx-auto mb-0">
+                            <a class="text-black font-weight-bold new-account" href="#">Register new account</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>

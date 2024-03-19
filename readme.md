@@ -21,3 +21,9 @@ Projects a `vanilla HTML` using `Bootstrap 5x library` and on occasion a third-p
 ## Flash session February 23
 
 Tables verses divs
+
+## Login pages
+
+Some bad, some good.
+
+https://www.sliderrevolution.com/resources/bootstrap-login-form/
