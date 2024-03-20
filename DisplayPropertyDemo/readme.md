@@ -6,4 +6,5 @@ Quickly and responsively toggle the display value of components and more with ou
 
 [Documentation](https://getbootstrap.com/docs/5.3/utilities/display/)
 
+In index page, the Oregon resident fieldset is hidden hidden on a small screen and another fieldset in current resident fieldset is exposed.
 
