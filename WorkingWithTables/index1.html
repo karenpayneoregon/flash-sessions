@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+
+
+
+        .filter-green{
+            filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+        }
+
+        .filter-red{
+            filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+        }
+
+
+        .oed-required {
+            /* DO NOT ALTER */
+            color: inherit;
+        }
+        input{
+            -moz-box-shadow: 3px 3px 4px #ccc;
+            -webkit-box-shadow: 3px 3px 4px #ccc;
+            box-shadow: 3px 3px 4px #ccc;
+            /* For IE 8 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#cccccc')";
+            /* For IE 5.5 - 7 */
+            filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#cccccc');
+        }
+        fieldset {
+            box-shadow:0 0 10px #999;
+        }
+        legend {
+
+
+            border: solid 1px black;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            
+            padding-top: 6px;
+            padding-bottom: 6px;
+
+            text-align: right;
+
+            background: -webkit-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+            background: -moz-linear-gradient(90deg, #CCCCCC, #FFFFFF) repeat scroll 0 0 transparent;
+
+            border-radius: 10px 10px 10px 10px;
+
+            -webkit-box-shadow: 0 0 15px #AAAAAA;
+            -moz-box-shadow: 0 0 15px #AAAAAA;
+            box-shadow: 0 0 15px #AAAAAA;
+
+            padding-right: .25em;
+            padding-left: .25em;
+            position: absolute;
+
+            margin: -30px 0px 0px 200px;
+        }
+        #ledgendSpan {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #div {
+            display: flex;
+            justify-content: center;
+        }
+
+        #table {
+            align-self: center;
+        }
+
+        /*        hr  {
+            align-content : center;
+            width : 50%;
+            margin-left : auto;
+            margin-right : auto;
+            margin-bottom: 3em;
+        }  */
+        
+        hr {
+            height: 1px;
+            margin: 50px 0;
+            background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0, 0, 0, 0)), color-stop(0.5, #333333), to(rgba(0, 0, 0, 0)));
+            background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+            background: -moz-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+            background: -o-linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+            background: linear-gradient(left, rgba(0, 0, 0, 0), #333333, rgba(0, 0, 0, 0));
+            border: 0;
+        }
+        hr:after {
+            display: block;
+            content: '';
+            height: 30px;
+            background-image: -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 116, color-stop(0%, #cccccc), color-stop(100%, rgba(255, 255, 255, 0)));
+            background-image: -webkit-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+            background-image: -moz-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+            background-image: -o-radial-gradient(center top, farthest-side, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+            background-image: radial-gradient(farthest-side at center top, #cccccc 0%, rgba(255, 255, 255, 0) 100%);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">Example</h1>
+    <hr />
+    <div id="div">
+        <fieldset>
+            <!--<br>-->
+            <legend><span id="ledgendSpan">Personal Info</span></legend>
+            <table style="margin-top: .5em;">
+                <tbody>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="name2">Full Name</label>
+                        </td>
+                        <td>
+                            <input id="name2" name="name2" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="id2" class="oed-required">ID Number</label>
+                        </td>
+                        <td>
+                            <input id="id2" name="id2" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="email2" class="oed-required">Email</label>
+                        </td>
+                        <td>
+                            <input id="email2" name="emai2l" type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                            <label for="phone2">Cell</label>
+
+                            <img src="wwwroot/images/redAsterisk.svg" alt="required" />
+
+
+                        </td>
+                        <td>
+                            <input id="phone2" name="phone2" type="text">
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td style="text-align: right">
+                        <label for="phone3">Office</label>
+
+                        <img src="wwwroot/images/greenAsterisk.svg"  alt="optional"/>
+
+
+                    </td>
+                    <td>
+                        <input id="phone3" name="phone3" type="text">
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </fieldset>
+    </div>
+    
+
+
+    <script>
+        var requiredElements = document.getElementsByClassName('oed-required');
+
+        for (var index = 0; index < requiredElements.length; ++index) {
+            var item = requiredElements[index];  
+            item.innerHTML += "<span style='color:#AA4A44;font-weight:bold'>&nbsp;&nbsp;(Required)</span>";
+        }
+    </script>
+    </body>
+</html>

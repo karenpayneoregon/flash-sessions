@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strong Password Validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link href="wwwroot/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="wwwroot/style.css" rel="stylesheet" />
+    <style>
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center">Login</h1>
+
+    <div class="container">
+        <form id="dummyForm">
+            <fieldset class="border border-dark p-3 shadow">
+
+                <legend class="float-none w-auto px-1" id="description">
+                    <span class="fw-bold ps-1 pe-1">Create account</span>
+                </legend>
+
+                <div class="row">
+                    <div class="col-3 text-end">
+                        <label for="emailAddress" class="form-label">Email address</label>
+                    </div>
+
+                    <div class="col-3 mb-2">
+                        <input type="email"
+                               class="form-control"
+                               id="emailAddress">
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+                    <div class="col-3 text-end">
+                        <label for="user_password" class="me-2">Password</label>
+                    </div>
+                    <div class="col-5">
+                        <div class="password-input-box">
+
+                            <input type="password"
+                                   id="user_password"
+                                   class="password-input form-control " />
+                            <i class="fa-solid fa-eye show-password"></i>
+
+                            <div class="password-checklist">
+                                <h2 class="checklist-title">Password should be</h2>
+
+                                <ul class="checklist">
+                                    <li class="list-item">At least 24 character long</li>
+                                    <li class="list-item">At least 1 number</li>
+                                    <li class="list-item">At least 1 lowercase letter</li>
+                                    <li class="list-item">At least 1 uppercase letter</li>
+                                    <li class="list-item">At least 1 special character</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+        </form>
+
+
+    </div>
+
+
+    <script src="wwwroot/app.js"></script>
+
+</body>
+</html>

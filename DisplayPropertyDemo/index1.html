@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -21,15 +21,30 @@
         ion-icon {
             color: green;
         }
+
+        .required-field::after {
+            content: "*";
+            color: red;
+            padding-right: -10px;
+        }
+
+/*        #email_address {
+            padding-left: 2.70em;
+        }
+        @media only screen and (min-width: 300px) and (max-width: 465px) {
+            #email_address {
+                padding-right: 0em;
+            }
+        }*/
     </style>
 
 </head>
 <body>
-    
+
     <div class="alert alert-primary p-0" role="alert">
         <h1 class="fs-5">Practice form</h1>
     </div>
-
+    
     <div class="container">
 
         <form id="personal_details_form" class="form-group w-75">
@@ -40,26 +55,69 @@
                     <span class="fw-bold ps-1 pe-1">Personal information <ion-icon name="apps-outline"></ion-icon></span>
                 </legend>
 
-                <label for="firstName" class="oed-required">First Name:</label>
-                <input name="firstName"
-                       class="form-control mb-1 oed-first-last-names"
-                       id="firstName"
-                       type="text"
-                       autocomplete="given-name">
 
-                <label for="lastName" class="oed-required">Last Name:</label>
-                <input name="lastName"
-                       class="form-control oed-first-last-names mb-1"
-                       id="lastName" type="text"
-                       autocomplete="family-name">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="firstName" class="col-form-label d-flex justify-content-end required-field">First Name:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input name="firstName"
+                               class="form-control mb-1 oed-first-last-names"
+                               id="firstName"
+                               type="text"
+                               autocomplete="given-name">
+                    </div>
 
-                <label for="email" class="oed-required">Email:</label>
-                <input name="email"
-                       class="form-control w-75 mb-1"
-                       id="email"
-                       type="email">
+                </div>
 
-                <div class="d-flex justify-content-between">
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="lastName" class="col-form-label d-flex justify-content-end  required-field">Last Name:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input name="lastName"
+                               class="form-control mb-1 oed-first-last-names"
+                               id="lastName"
+                               type="text"
+                               autocomplete="given-name">
+                    </div>
+
+                </div>
+
+                <div class="row g-3 align-items-center">
+                    
+                    <div class="col-auto">
+                        <label id="email_address" for="email" class="col-form-label d-flex justify-content-end  required-field">Email:</label>
+                    </div>
+                    <div class="col-auto">
+                        <input name="email"
+                               class="form-controlmb-1 oed-first-last-names"
+                               id="email"
+                               type="email"
+                               autocomplete="given-name">
+                    </div>
+
+                </div>
+
+
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                        <label for="spoken_language" class="col-form-label  d-flex justify-content-end">Language</label>
+                    </div>
+                    <div class="col-auto">
+                        <select id="spoken_language"
+                                name="spoken_language"
+                                class="form-select mb-2"
+                                aria-label="current state"
+                                required>
+                        </select>
+                    </div>
+
+                </div>
+
+
+
+                <!--<div class="d-flex justify-content-between">
                     <label for="spoken_language" class="required oed-required">Language</label>
                 </div>
 
@@ -72,7 +130,7 @@
                                 required>
                         </select>
                     </div>
-                </div>
+                </div>-->
 
             </fieldset>
 
@@ -298,11 +356,10 @@
             var requiredElements = document.getElementsByClassName('oed-required');
 
             for (var index = 0; index < requiredElements.length; ++index) {
-                var item = requiredElements[index];  
+                var item = requiredElements[index];
                 item.innerHTML += "<span style='color:#AA4A44;font-weight:bold'>&nbsp;&nbsp;(Required)</span>";
             }
         });
-
 
 
 

@@ -207,6 +207,52 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DisplayPropertyDemo", "Disp
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{B138DF68-EBB2-4439-BB71-C44BD70BC93C}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WorkingWithTables", "WorkingWithTables\", "{CB99DF8B-7236-492C-B619-415378BF5671}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61731"
+		Debug.AspNetCompiler.PhysicalPath = "WorkingWithTables\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61731\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61731"
+		Release.AspNetCompiler.PhysicalPath = "WorkingWithTables\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61731\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61731"
+		SlnRelativePath = "WorkingWithTables\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PasswordMeter", "PasswordMeter\", "{6B3F703C-90D2-48C0-BD03-E55A912AB04C}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_57745"
+		Debug.AspNetCompiler.PhysicalPath = "PasswordMeter\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57745\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_57745"
+		Release.AspNetCompiler.PhysicalPath = "PasswordMeter\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_57745\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "57745"
+		SlnRelativePath = "PasswordMeter\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -249,6 +295,18 @@ Global
 		{BC813B5B-1B9B-45F5-94FB-31BBD6F9CDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC813B5B-1B9B-45F5-94FB-31BBD6F9CDEC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC813B5B-1B9B-45F5-94FB-31BBD6F9CDEC}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{B138DF68-EBB2-4439-BB71-C44BD70BC93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B138DF68-EBB2-4439-BB71-C44BD70BC93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B138DF68-EBB2-4439-BB71-C44BD70BC93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B138DF68-EBB2-4439-BB71-C44BD70BC93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB99DF8B-7236-492C-B619-415378BF5671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB99DF8B-7236-492C-B619-415378BF5671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB99DF8B-7236-492C-B619-415378BF5671}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB99DF8B-7236-492C-B619-415378BF5671}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{6B3F703C-90D2-48C0-BD03-E55A912AB04C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3F703C-90D2-48C0-BD03-E55A912AB04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3F703C-90D2-48C0-BD03-E55A912AB04C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3F703C-90D2-48C0-BD03-E55A912AB04C}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="wwwroot/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <script src="wwwroot/jquery/jquery.js"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <form class="needs-validation  mb-5 border-top" novalidate action="#" method="#" onsubmit="return false">
+            <div class="form-group">
+                <div class="col-2">
+                    <label for="validationPassword">Password</label>
+                    <input type="password"
+                           class="form-control"
+                           id="validationPassword"
+                           minlength="8"
+                           name="password"
+                           placeholder="Password"
+                           value=""
+                           required>
+
+                    <!--TODO-->
+                    <div class="progress" style="height: 5px;">
+                        <div id="progressbar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 10%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+
+                        </div>
+                    </div>
+                    <small id="passwordHelpBlock" class="form-text text-muted">
+                        Your password must be 8-20 characters long, must contain special characters "!@#$%&*_?", numbers, lower and upper letters only.
+                    </small>
+
+                    <div id="feedbackin" class="valid-feedback">
+                        Strong Password!
+                    </div>
+                    <div id="feedbackirn" class="invalid-feedback">
+                        At lead 8 characters,
+                        Number, special character
+                        Capital Letter and Small letters
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+    <script>
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                const validation = Array.prototype.filter.call(forms, function (form) {
+                    form.validationPassword.addEventListener('keypress', function (event) {
+                        var checker = true;
+                        var chr = String.fromCharCode(event.which);
+
+                        var matchedCase = new Array();
+                        matchedCase.push("[!@#$%&*_?]");
+                        matchedCase.push("[A-Z]");
+                        matchedCase.push("[0-9]");
+                        matchedCase.push("[a-z]");
+
+                        for (var index = 0; index < matchedCase.length; index++) {
+                            if (new RegExp(matchedCase[index]).test(chr)) {
+                                checker = false;
+                            }
+                        }
+
+                        if (form.validationPassword.value.length >= 20)
+                            checker = true;
+
+                        if (checker) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+
+                    });
+                    var matchedCase = new Array();
+                    matchedCase.push("[$@$$!%*#?&]"); // Special characters
+                    matchedCase.push("[A-Z]");        // Uppercase
+                    matchedCase.push("[0-9]");        // Numbers
+                    matchedCase.push("[a-z]");        // Lowercase 
+
+
+                    form.validationPassword.addEventListener('keyup', function () {
+
+                        var messageCase = new Array();
+                        messageCase.push(" Special character"); // Special characters
+                        messageCase.push(" Upper Case");        // Uppercase
+                        messageCase.push(" Numbers");           // Numbers
+                        messageCase.push(" Lower Case");        // Lowercase 
+
+                        var ctr = 0;
+                        for (var index = 0; index < matchedCase.length; index++) {
+                            if (new RegExp(matchedCase[index]).test(form.validationPassword.value)) {
+                                if (index === 0) messageCase.splice(messageCase.indexOf(" Special Character"), 1);
+                                if (index === 1) messageCase.splice(messageCase.indexOf(" Upper Case"), 1);
+                                if (index === 2) messageCase.splice(messageCase.indexOf(" Numbers"), 1);
+                                if (index === 3) messageCase.splice(messageCase.indexOf(" Lower Case"), 1);
+                                ctr++;
+                            }
+                        }
+                        // Display it
+                        var progressbar = 0;
+                        var strength = "";
+                        var bClass = "";
+                        switch (ctr) {
+                        case 0:
+                        case 1:
+                            strength = "Way too Weak";
+                            progressbar = 15;
+                            bClass = "bg-danger";
+                            break;
+                        case 2:
+                            strength = "Very Weak";
+                            progressbar = 25;
+                            bClass = "bg-danger";
+                            break;
+                        case 3:
+                            strength = "Weak";
+                            progressbar = 34;
+                            bClass = "bg-warning";
+                            break;
+                        case 4:
+                            strength = "Medium";
+                            progressbar = 65;
+                            bClass = "bg-warning";
+                            break;
+                        }
+
+                        if (strength === "Medium" && form.validationPassword.value.length >= 8) {
+                            strength = "Strong";
+                            bClass = "bg-success";
+                            form.validationPassword.setCustomValidity("");
+                        } else {
+                            form.validationPassword.setCustomValidity(strength);
+                        }
+
+                        var currentText = "";
+
+                        if (form.validationPassword.value.length < 8) {
+                            var lengthI = 8 - form.validationPassword.value.length;
+                            currentText += ` ${lengthI} more Characters, `;
+                        }
+
+                        currentText += messageCase;
+   
+                        if (currentText) {
+                            currentText = ` You Need${currentText}`;
+                        }
+
+
+                        $("#feedbackin, #feedbackirn").text(strength + currentText);
+                        $("#progressbar").removeClass("bg-danger bg-warning bg-success").addClass(bClass);
+                        var passwordLength = form.validationPassword.value.length;
+                        if (passwordLength > 0) progressbar += ((passwordLength - 0) * 1.75);
+                        var percentage = progressbar + "%";
+                        form.validationPassword.parentNode.classList.add('was-validated');
+                        $("#progressbar").width(percentage);
+
+                        // TODO
+                        if (form.validationPassword.checkValidity() === true) {
+                            //form.verifyPassword.disabled = false;
+                        } else {
+                            //form.verifyPassword.disabled = true;
+                        }
+                    });
+                });
+            }, false);
+        })();
+    </script>
+</body>
+</html>

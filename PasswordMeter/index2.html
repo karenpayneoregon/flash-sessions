@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="wwwroot/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <style>
+        legend {
+            font-weight: 900;
+            border: solid 1px black;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            padding: 6px;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+<h1 style="text-align: center">ABC Inc</h1>
+<div class="container">
+
+    <form id="reset_password" class="mt-xxl-5">
+
+        <fieldset class="border border-dark p-3 shadow">
+            <legend class="float-none w-auto px-1" id="description">
+                <span class="fw-bold ps-1 pe-1">Reset password</span>
+            </legend>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" class="form-control" id="confirm_password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+
+        </fieldset>
+
+
+    </form>
+
+</div>
+
+<script>
+
+    var password = document.getElementById("password"),
+        confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword() {
+
+        if(password.value !== confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+
+</script>
+</html>

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using tables</title>
+    <link href="wwwroot/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--
+    Bad design for screen reader
+    -->
+
+    <div class="alert alert-primary" role="alert">
+        <h1>Working with tables</h1>
+    </div>
+
+    <div class="container">
+        <div class="w-50">
+            <form>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th class="table-dark">
+                                Delivery provider
+                            </th>
+                            <th class="table-dark">
+                                Insurance
+                            </th>
+                            <th class="table-dark">
+                                Comment
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <input id="dhl" name="provider" type="radio" style="margin-left: .5em;" />
+                                <label for="dhl" style="margin-left: .5em;">DHL</label>
+                            </th>
+                            <td>
+                                <input type="checkbox" style="margin-left: .5em;" />
+                            </td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input id="ups" name="provider" type="radio" style="margin-left: .5em;" />
+                                <label for="ups" style="margin-left: .5em;">UPS</label>
+                            </th>
+                            <td>
+                                <input type="checkbox" style="margin-left: .5em;" />
+                            </td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input id="post" name="provider" type="radio" style="margin-left: .5em;" />
+                                <label for="post" style="margin-left: .5em;">Post</label>
+                            </th>
+                            <td>
+                                <input type="checkbox" style="margin-left: .5em;" />
+                            </td>
+                            <td>
+                                <textarea></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>

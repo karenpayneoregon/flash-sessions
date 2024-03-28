@@ -1,0 +1,43 @@
+button {
+    width: 12em;
+}
+
+.swal2-cancel {
+    margin-left: 2em;
+}
+
+h1 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: green;
+    font-size: 18px;
+}
+
+.no-border {
+    border: 0;
+}
+.no-before-icon::before {
+    display: none !important;
+}
+
+/* remove border for sweetalert icon */
+.swal2-icon {
+    border: 0;
+}
+
+/* watermark */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('https://github.com/karenpayneoregon/flash-sessions/blob/37e6ee36231d6f722a7117f92f8607f39754eeb8/assets/watermark.png?raw=true');
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.divider {
+    margin-top: 1em;
+}
