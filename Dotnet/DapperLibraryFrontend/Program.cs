@@ -18,7 +18,7 @@ internal partial class Program
         recordCount = await repo.RecordCount();
 
 
-        await repo.AddRange(BogusOperations.People(5));
+        var (success, exception) = await repo.AddRange(BogusOperations.People(5));
         recordCount = await repo.RecordCount();
 
         var allPeople = await repo.GetAllAsync();
