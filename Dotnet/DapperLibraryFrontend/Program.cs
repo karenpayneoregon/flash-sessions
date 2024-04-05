@@ -1,9 +1,7 @@
-﻿using System.Diagnostics;
-using DapperLibrary1.Models;
+﻿using DapperLibrary1.Models;
 using DapperLibrary1.Repositories;
 using DapperLibrary1.Validators;
 using DapperLibraryFrontend.MockingClasses;
-// ReSharper disable ConditionIsAlwaysTrueOrFalse
 
 namespace DapperLibraryFrontend;
 
