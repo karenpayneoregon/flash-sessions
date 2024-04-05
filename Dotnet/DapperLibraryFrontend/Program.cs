@@ -17,7 +17,7 @@ internal partial class Program
         await repo.ResetPersonTable();
         recordCount = await repo.RecordCount();
 
-
+        
         var (success, exception) = await repo.AddRange(BogusOperations.People(5));
         recordCount = await repo.RecordCount();
 
