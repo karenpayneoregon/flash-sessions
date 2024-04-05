@@ -7,7 +7,7 @@ A model usually represents a table in a dataabase while a class performs work li
 
 ## Debugging tips
 
-- To set a breakpoint with the keyboard press <kbd>F9</kbd> on a line of code to stop on.
+- To set a [breakpoint](https://learn.microsoft.com/en-us/visualstudio/debugger/using-breakpoints?view=vs-2022) with the keyboard press <kbd>F9</kbd> on a line of code to stop on.
 - For mouse users, click in the gutter on the line of code to stop on as shown below. Clicking on the grey circle will turn to red.
 
 ![B1](assets/B1.png)

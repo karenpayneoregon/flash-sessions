@@ -1,4 +1,5 @@
-﻿using DapperLibrary1.Models;
+﻿using System.Diagnostics;
+using DapperLibrary1.Models;
 using DapperLibrary1.Repositories;
 using DapperLibrary1.Validators;
 using DapperLibraryFrontend.MockingClasses;
@@ -43,13 +44,14 @@ internal partial class Program
             var deleted = await repo.Remove(anotherPerson);
         }
 
-
+        
         ValidatePerson();
-        //Console.ReadLine();
+
     }
 
     /// <summary>
-    /// 
+    /// In this method validation fails because the first and last name are not set
+    /// and have rules that they must be set.
     /// </summary>
     private static void ValidatePerson()
     {
