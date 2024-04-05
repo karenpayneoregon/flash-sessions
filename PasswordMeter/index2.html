@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reset your password</title>
+
+    <!--suppress no favicon-->
+    <link rel="shortcut icon" href="#">
+
     <link href="wwwroot/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <style>
         legend {
@@ -22,7 +26,9 @@
 <body>
 
 </body>
-<h1 style="text-align: center">ABC Inc</h1>
+
+<h1 style="text-align: center; margin-top: 14px; margin-bottom: 2em;">ABC Inc</h1>
+
 <div class="container">
 
     <form id="reset_password" class="mt-xxl-5">
@@ -32,14 +38,14 @@
                 <span class="fw-bold ps-1 pe-1">Reset password</span>
             </legend>
 
-            <div class="form-group">
+            <div>
                 <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" required>
+                <input type="password" class="form-control w-50" id="password" required>
             </div>
 
-            <div class="form-group">
+            <div>
                 <label for="confirm_password">Confirm Password</label>
-                <input type="password" class="form-control" id="confirm_password" required>
+                <input type="password" class="form-control w-50" id="confirm_password" required>
             </div>
 
             <button type="submit" class="btn btn-primary mt-2">Submit</button>
@@ -58,7 +64,7 @@
 
     function validatePassword() {
 
-        if(password.value !== confirm_password.value) {
+        if (password.value !== confirm_password.value) {
             confirm_password.setCustomValidity("Passwords Don't Match");
         } else {
             confirm_password.setCustomValidity('');

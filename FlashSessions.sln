@@ -207,8 +207,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DisplayPropertyDemo", "Disp
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{B138DF68-EBB2-4439-BB71-C44BD70BC93C}"
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WorkingWithTables", "WorkingWithTables\", "{CB99DF8B-7236-492C-B619-415378BF5671}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7.2"
@@ -253,6 +251,12 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PasswordMeter", "PasswordMe
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C# Namespaces", "C# Namespaces", "{49E46C01-6949-4C55-84BC-6016ADDE8A48}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperLibrary1", "Dotnet\DapperLibrary1\DapperLibrary1.csproj", "{95C6603F-9971-4829-A3C2-CAC3E4A4645B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperLibraryFrontend", "Dotnet\DapperLibraryFrontend\DapperLibraryFrontend.csproj", "{A7F7A2C9-8AC3-4BAB-9036-78FA2760BB6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -295,10 +299,6 @@ Global
 		{BC813B5B-1B9B-45F5-94FB-31BBD6F9CDEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC813B5B-1B9B-45F5-94FB-31BBD6F9CDEC}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC813B5B-1B9B-45F5-94FB-31BBD6F9CDEC}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{B138DF68-EBB2-4439-BB71-C44BD70BC93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B138DF68-EBB2-4439-BB71-C44BD70BC93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B138DF68-EBB2-4439-BB71-C44BD70BC93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B138DF68-EBB2-4439-BB71-C44BD70BC93C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB99DF8B-7236-492C-B619-415378BF5671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB99DF8B-7236-492C-B619-415378BF5671}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB99DF8B-7236-492C-B619-415378BF5671}.Release|Any CPU.ActiveCfg = Debug|Any CPU
@@ -307,9 +307,21 @@ Global
 		{6B3F703C-90D2-48C0-BD03-E55A912AB04C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B3F703C-90D2-48C0-BD03-E55A912AB04C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{6B3F703C-90D2-48C0-BD03-E55A912AB04C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{95C6603F-9971-4829-A3C2-CAC3E4A4645B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C6603F-9971-4829-A3C2-CAC3E4A4645B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C6603F-9971-4829-A3C2-CAC3E4A4645B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C6603F-9971-4829-A3C2-CAC3E4A4645B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F7A2C9-8AC3-4BAB-9036-78FA2760BB6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F7A2C9-8AC3-4BAB-9036-78FA2760BB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F7A2C9-8AC3-4BAB-9036-78FA2760BB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F7A2C9-8AC3-4BAB-9036-78FA2760BB6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{95C6603F-9971-4829-A3C2-CAC3E4A4645B} = {49E46C01-6949-4C55-84BC-6016ADDE8A48}
+		{A7F7A2C9-8AC3-4BAB-9036-78FA2760BB6D} = {49E46C01-6949-4C55-84BC-6016ADDE8A48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5769EB0C-6D67-43FF-943E-3A3DD94E74D3}
