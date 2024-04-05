@@ -45,3 +45,5 @@ Navigate through code by using the Visual Studio [debugger](https://learn.micros
 ## Pluralsight
 
 Karen's [recommendations](https://app.pluralsight.com/channels/details/645f3284-c561-497e-aa5f-cf352fcb5d7f?s=1)
+
+![Dotnet Bot](assets/dotnet_bot.svg)
