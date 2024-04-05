@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using DapperLibrary1.Interfaces;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 #pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
 #pragma warning disable CS8612 // Nullability of reference types in type doesn't match implicitly implemented member.
@@ -6,13 +7,16 @@ using System.Runtime.CompilerServices;
 
 namespace DapperLibrary1.Models;
 
-public class Person : INotifyPropertyChanged
+public class Person : INotifyPropertyChanged, IPerson
 {
     private int _id;
     private string _firstName;
     private string _lastName;
     private DateOnly _birthDate;
 
+    /// <summary>
+    /// Primary key
+    /// </summary>
     public int Id
     {
         get => _id;

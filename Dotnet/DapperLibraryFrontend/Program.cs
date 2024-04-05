@@ -1,5 +1,6 @@
 ﻿using DapperLibrary1.Models;
 using DapperLibrary1.Repositories;
+using DapperLibrary1.Validators;
 using DapperLibraryFrontend.MockingClasses;
 // ReSharper disable ConditionIsAlwaysTrueOrFalse
 
@@ -22,21 +23,11 @@ internal partial class Program
         await repo.AddRange(BogusOperations.People(5));
         Console.WriteLine($"Record count: {await repo.RecordCount()}");
 
+        var allPeople = await repo.GetAllAsync();
+
         var person = await repo.GetByPrimaryKey(1);
 
-        person.FirstName = "John";
-        person.LastName = "Doe";
-        person.BirthDate = new DateOnly(2023, 12, 5);
-        
-        var (success, exception) = await repo.Update(person);
-        if (success)
-        {
-            Console.WriteLine("Person updated");
-        }
-        else
-        {
-            Console.WriteLine($"Failed to update person\n{exception.Message}");
-        }
+        await UpdatePerson(person, repo);
 
         Person newPerson = new()
         {
@@ -53,7 +44,43 @@ internal partial class Program
             var deleted = await repo.Remove(anotherPerson);
         }
 
-        
+
+        ValidatePerson();
         //Console.ReadLine();
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private static void ValidatePerson()
+    {
+        Person person = new()
+        {
+            BirthDate = new DateOnly(2023, 12, 5)
+        };
+
+        PersonValidator validator = new();
+        var validate = validator.Validate(person);
+
+        person.FirstName = "John";
+        person.LastName = "Doe";
+        validate = validator.Validate(person);
+
+    }
+    private static async Task UpdatePerson(Person person, PersonRepository repo)
+    {
+        person.FirstName = "John";
+        person.LastName = "Doe";
+        person.BirthDate = new DateOnly(2023, 12, 5);
+        
+        var (success, exception) = await repo.Update(person);
+        if (success)
+        {
+            Console.WriteLine("Person updated");
+        }
+        else
+        {
+            Console.WriteLine($"Failed to update person\n{exception.Message}");
+        }
     }
 }
