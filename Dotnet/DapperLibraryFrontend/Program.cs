@@ -13,15 +13,14 @@ internal partial class Program
 
         PersonRepository repo = new();
         
-        Console.WriteLine($"Record count: {await repo.RecordCount()}");
-
+        var recordCount = await repo.RecordCount();
 
         await repo.ResetPersonTable();
-        Console.WriteLine($"Record count: {await repo.RecordCount()}");
+        recordCount = await repo.RecordCount();
 
 
         await repo.AddRange(BogusOperations.People(5));
-        Console.WriteLine($"Record count: {await repo.RecordCount()}");
+        recordCount = await repo.RecordCount();
 
         var allPeople = await repo.GetAllAsync();
 
@@ -72,15 +71,25 @@ internal partial class Program
         person.FirstName = "John";
         person.LastName = "Doe";
         person.BirthDate = new DateOnly(2023, 12, 5);
-        
-        var (success, exception) = await repo.Update(person);
-        if (success)
+
+        PersonValidator validator = new();
+        var validate = await validator.ValidateAsync(person);
+        if (validate.IsValid)
         {
-            Console.WriteLine("Person updated");
+            var (success, exception) = await repo.Update(person);
+            if (success)
+            {
+                
+            }
+            else
+            {
+                
+            }
         }
         else
         {
-            Console.WriteLine($"Failed to update person\n{exception.Message}");
+            var errors = validate.Errors;
         }
+
     }
 }
