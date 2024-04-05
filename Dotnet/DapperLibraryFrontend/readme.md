@@ -38,3 +38,10 @@ You set a breakpoint with or without conditions and later click on the breakpoin
 
 To restore the breakpoint without closing the current tab, press <kbd>CTRL</kbd> + <kbd>Z</kbd>
 
+## Documentation
+
+Navigate through code by using the Visual Studio [debugger](https://learn.microsoft.com/en-us/visualstudio/debugger/navigating-through-code-with-the-debugger?view=vs-2022&tabs=csharp)
+
+## Pluralsight
+
+Karen's [recommendations](https://app.pluralsight.com/channels/details/645f3284-c561-497e-aa5f-cf352fcb5d7f?s=1)
