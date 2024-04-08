@@ -1,4 +1,5 @@
 ﻿using SomeLibrary1.Models;
+using SomeLibraryFrontEnd.Classes;
 
 namespace SomeLibraryFrontEnd;
 
@@ -52,7 +53,7 @@ internal partial class Program
 
         Console.WriteLine($"{employee.Id,-4}{employee.Title,-5}{employee.FirstName,-10}{employee.LastName,-10}{employee.BirthDate}");
         Console.WriteLine(employee.GetFullName());
-        Console.WriteLine(employee.Description);
+        Console.WriteLine($"   {employee.Description}");
     }
 
     private static void ManagerExample()
@@ -64,11 +65,18 @@ internal partial class Program
             FirstName = "May",
             LastName = "Be",
             BirthDate = new DateOnly(2023, 12, 5),
-            HireDate = new DateOnly(2023, 12, 5)
+            HireDate = new DateOnly(2023, 12, 5),
+            Employees = BogusOperations.EmployeesList()
+
         };
 
         Console.WriteLine($"{manager.Id,-4}{manager.Title,-5}{manager.FirstName,-10}{manager.LastName,-10}{manager.BirthDate}");
         Console.WriteLine(manager.GetFullName());
-        Console.WriteLine(manager.Description);
+        Console.WriteLine($"   {manager.Description}");
+        Console.WriteLine("       Employees");
+        foreach (var employee in manager.Employees)
+        {
+            Console.WriteLine($"       {employee.Id,-5}{employee.FirstName,-20}{employee.LastName}");
+        }
     }
 }
