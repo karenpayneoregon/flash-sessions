@@ -10,4 +10,5 @@ internal partial class Program
         Console.Title = "Code sample";
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
     }
+
 }

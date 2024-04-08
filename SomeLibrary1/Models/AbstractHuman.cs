@@ -6,13 +6,15 @@
  */
 
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using Spectre.Console;
 
 namespace SomeLibrary1.Models;
 
 /// <summary>
 /// The abstract keyword enables you to create classes and class members
-/// that are incomplete and must be implemented in a derived class.
+/// that are incomplete (or sometimes has code) and must be implemented in a derived class.
 /// </summary>
 public abstract class AbstractHuman
 {
@@ -20,15 +22,13 @@ public abstract class AbstractHuman
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Title { get; set; }
-    public virtual void DoWork(int index)
+    public virtual void PerformSimpleTask(int index)
     {
-        Console.WriteLine($"Original implementation {index}");
+        AnsiConsole.MarkupLine($"[lightcoral]Base implementation[/] - [greenyellow]Caller '{GetType()}'[/]");
     }
 
-    public virtual string GetFullName()
-    {
-        return $"{LastName} {FirstName}"; // has no clue what FirstName and LastName are
-    }
+    public virtual string GetFullName() 
+        => $"{FirstName} {LastName}"; // has no clue what FirstName and LastName are
 }
 
 public class Person : AbstractHuman, INotifyPropertyChanged
@@ -82,11 +82,19 @@ public class Person : AbstractHuman, INotifyPropertyChanged
         }
     }
 
-    public override void DoWork(int index)
+    /// <summary>
+    /// Here we are overriding code in base class AbstractHuman
+    /// </summary>
+    /// <param name="index"></param>
+    public override void PerformSimpleTask(int index)
     {
-        base.DoWork(index +=9);
-        Console.WriteLine($"New implementation with {index}");
+        base.PerformSimpleTask(index +=9);
+
+        var parent = GetType().BaseType.Name;
+        AnsiConsole.MarkupLine($"[lightcoral]New implementation of {GetType().Name}.{GetMethodName()}[/] [greenyellow]overriding {parent}.{GetMethodName()}[/]");
     }
+    private string GetMethodName() 
+        => new StackTrace(1).GetFrame(0)!.GetMethod().Name;
 
     public override string GetFullName()
     {

@@ -15,7 +15,16 @@ internal partial class Program
         EmployeeExample();
         Console.WriteLine(line);
 
+
         ManagerExample();
+
+        AnsiConsole.MarkupLine("[cyan]Abstract Class Example[/]");
+        Human[] humans = [new American() {FirstName = "Mary"}, new Russian() {FirstName = "Kira" }];
+        foreach (var human in humans)
+        {
+            Console.WriteLine($"{human.GetType().Name,-10} {human.FirstName} says {human.SayTimeOfDay}");
+        }
+
 
         Console.ReadLine();
     }
@@ -31,10 +40,12 @@ internal partial class Program
             BirthDate = new DateOnly(2023, 12, 5)   // no override
         };
 
-        person.DoWork(1);
+        person.PerformSimpleTask(1);
+        Console.WriteLine();
 
         person.FirstName = "Mike";
 
+        AnsiConsole.MarkupLine("[cyan]Single Person[/]");
         Console.WriteLine($"{person.Id,-4}{person.Title,-5}{person.FirstName,-10}{person.LastName,-10}{person.BirthDate}");
         Console.WriteLine(person.GetFullName());
     }
@@ -51,6 +62,7 @@ internal partial class Program
             HireDate = new DateOnly(2023, 12, 5)
         };
 
+        AnsiConsole.MarkupLine("[cyan]Single Employee[/]");
         Console.WriteLine($"{employee.Id,-4}{employee.Title,-5}{employee.FirstName,-10}{employee.LastName,-10}{employee.BirthDate}");
         Console.WriteLine(employee.GetFullName());
         Console.WriteLine($"   {employee.Description}");
@@ -70,13 +82,15 @@ internal partial class Program
 
         };
 
+        AnsiConsole.MarkupLine("[cyan]Single Manager Employees[/]");
+
         Console.WriteLine($"{manager.Id,-4}{manager.Title,-5}{manager.FirstName,-10}{manager.LastName,-10}{manager.BirthDate}");
         Console.WriteLine(manager.GetFullName());
         Console.WriteLine($"   {manager.Description}");
         Console.WriteLine("       Employees");
         foreach (var employee in manager.Employees)
         {
-            Console.WriteLine($"       {employee.Id,-5}{employee.FirstName,-20}{employee.LastName}");
+            Console.WriteLine($"       {employee.Id,-5}{employee.FirstName,-20}{employee.LastName,-20}{employee.HireDate}");
         }
     }
 }
