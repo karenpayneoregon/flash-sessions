@@ -24,16 +24,21 @@ public enum Language
 /// </summary>
 public class Howdy
 {
+    /// <summary>
+    /// Say hello in different languages.
+    /// </summary>
+    /// <param name="language"><see cref="Language"/></param>
+    /// <returns>Greeting for time of day</returns>
     public static string SayHello(Language language) =>
         /*
-         * This is a switch expression which should only be used when
+         * 💡 This is a switch expression which should only be used when
          * an entire team understand them.
          */
         language switch
         {
             Language.American => AmericanTimeOfDay(),
             Language.Russian => RussianTimeOfDay(),
-            _ => throw new ArgumentOutOfRangeException(nameof(language), language, null)
+            _ => "Unknown language" // could throw an exception instead
         };
 
 

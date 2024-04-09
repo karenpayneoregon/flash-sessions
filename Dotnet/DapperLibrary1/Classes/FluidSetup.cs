@@ -7,7 +7,7 @@ namespace DapperLibrary1.Classes;
 internal class FluidSetup
 {
     [ModuleInitializer]
-    public static void Init()
+    public static void InitializeFluentValidation()
     {
 
         // Set up FluentValidation for .WithName

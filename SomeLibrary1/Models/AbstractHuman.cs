@@ -15,6 +15,7 @@ namespace SomeLibrary1.Models;
 /// <summary>
 /// The abstract keyword enables you to create classes and class members
 /// that are incomplete (or sometimes has code) and must be implemented in a derived class.
+/// 💡 An abstract class can not be created on its own, it must be inherited.
 /// </summary>
 public abstract class AbstractHuman
 {
@@ -28,9 +29,13 @@ public abstract class AbstractHuman
     }
 
     public virtual string GetFullName() 
-        => $"{FirstName} {LastName}"; // has no clue what FirstName and LastName are
+        => $"{FirstName} {LastName}"; // has no clue what FirstName and LastName are 🙄
 }
 
+/// <summary>
+/// A class which inherits from an abstract class must implement all abstract members
+/// and provides change notification using <see cref="INotifyPropertyChanged"/>.
+/// </summary>
 public class Person : AbstractHuman, INotifyPropertyChanged
 {
     private int _id;
@@ -49,6 +54,14 @@ public class Person : AbstractHuman, INotifyPropertyChanged
         }
     }
 
+
+    /// <summary>
+    /// Let's talk about
+    /// - Regular break points
+    /// - Conditional break points
+    /// - Enable/disable break points
+    /// - Ooops I removed a break point by accident 😒
+    /// </summary>
     public new string FirstName
     {
         get => _firstName;

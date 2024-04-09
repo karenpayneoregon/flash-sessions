@@ -8,21 +8,26 @@ using static SomeLibrary1.Models.Howdy;
 
 namespace SomeLibrary1.Models;
 
-    public abstract class Human
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public abstract string SayTimeOfDay { get; }
-    }
+public abstract class Human
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    protected abstract Language Language { get; }
+    public abstract string SayTimeOfDay { get; }
+}
 
-    public class American : Human
-    {
-        public override string SayTimeOfDay 
-            => SayHello(Language.American);
-    }
+public class American : Human
+{
+    protected override Language Language => Language.American;
 
-    public class Russian : Human
-    {
-        public override string SayTimeOfDay 
-            => SayHello(Language.Russian);
-    }
+    public override string SayTimeOfDay
+        => SayHello(Language);
+}
+
+public class Russian : Human
+{
+    protected override Language Language => Language.Russian;
+
+    public override string SayTimeOfDay
+        => SayHello(Language);
+}
