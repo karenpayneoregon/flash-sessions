@@ -24,27 +24,41 @@
             </legend>
 
             <div class="mb-3">
+
                 <label for="usersEmail" class="form-label" style="color: #af190d !important;">
                     <img src="wwwroot/images/redAsterisk.svg" alt="required"/>Email address
                 </label>
-                <input type="email" class="form-control" id="usersEmail" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+
+                <input type="email"
+                       class="form-control"
+                       id="usersEmail"
+                       aria-describedby="emailHelp">
+
+                <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                </div>
+
             </div>
 
             <div class="mb-3">
+                
                 <label for="usersPassword" class="form-label" style="color: #af190d !important;">
                     <img src="wwwroot/images/greenAsterisk.svg" alt="password"/>Password
                 </label>
+
                 <input type="password" class="form-control" id="usersPassword">
             </div>
 
             <div class="mb-3 form-check">
+                
                 <input type="checkbox" class="form-check-input" id="requiredCheckMark">
+
                 <label class="form-check-label"
                        style="color: #af190d !important;"
                        for="requiredCheckMark">
                     Check me out
                 </label>
+
             </div>
 
             <button id="post_form" type="submit" class="btn btn-primary">Submit</button>

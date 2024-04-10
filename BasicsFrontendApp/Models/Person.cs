@@ -9,7 +9,6 @@ public class Person : IHuman
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Title { get; set; }
-
     
     public DateOnly BirthDate { get; set; }
 
@@ -18,7 +17,6 @@ public class Person : IHuman
 
 public class Taxpayer : Person, ITaxpayer
 {
-    //[JsonIgnore]
     public string SSN { get; set; }
     public string SocialSecurityValue => SSN.Replace("-","");
     public string PIN { get; set; }
