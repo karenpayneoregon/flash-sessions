@@ -1,5 +1,5 @@
 ﻿#pragma warning disable CA1847
-namespace BasicsFrontendApp.Classes;
+namespace BasicsFrontendApp.Classes.Helpers;
 public static class StringExtensions
 {
     /// <summary>
@@ -15,7 +15,7 @@ public static class StringExtensions
 
         const int ssnLength = 9;
         const string separator = "-";
-        
+
         int maskLength = ssnLength - digitsToShow;
         int output = int.Parse(ssn.Replace(separator, string.Empty).Substring(maskLength, digitsToShow));
 
@@ -36,5 +36,5 @@ public static class StringExtensions
         return string.Format(format, output);
 
     }
-    
+
 }

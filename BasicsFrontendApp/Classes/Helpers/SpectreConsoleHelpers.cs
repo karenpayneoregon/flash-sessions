@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using BasicsFrontendApp.Models;
 
-namespace BasicsFrontendApp.Classes;
+namespace BasicsFrontendApp.Classes.Helpers;
 
 public static class SpectreConsoleHelpers
 {
@@ -21,7 +21,7 @@ public static class SpectreConsoleHelpers
         AnsiConsole.WriteLine();
     }
 
-    public static void PrintCyan([CallerMemberName] string? methodName = null)
+    public static void PrintCyan([CallerMemberName] string methodName = null)
     {
         AnsiConsole.MarkupLine($"[cyan]{methodName}[/]");
         Console.WriteLine();

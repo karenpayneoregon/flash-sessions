@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace BasicsFrontendApp.Classes;
+namespace BasicsFrontendApp.Classes.Helpers;
 
 /// <summary>
 /// Custom serializer to mask SSN

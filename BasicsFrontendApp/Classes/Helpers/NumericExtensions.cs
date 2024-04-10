@@ -1,4 +1,4 @@
-﻿namespace BasicsFrontendApp.Classes;
+﻿namespace BasicsFrontendApp.Classes.Helpers;
 public static class NumericExtensions
 {
     /// <summary>

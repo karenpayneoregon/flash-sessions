@@ -1,0 +1,1 @@
+:star2: Classes here are outside the scope of week 1 but feel free to ask questions.
