@@ -1,0 +1,32 @@
+
+.main-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+legend {
+    font-weight: 900;
+    border: solid 1px black;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 16px;
+}
+
+#post_form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #af190d;
+}
+
+.main-color: {
+    color: #af190d !important;
+}

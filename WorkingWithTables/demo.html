@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="wwwroot/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <!--suppress no favicon-->
+    <link rel="shortcut icon" href="#">
+
+    <title>Sample for asterisks </title>
+    <link href="wwwroot/lib/demo.css" rel="stylesheet" />
+</head>
+<body>
+
+<h1 class="fs-6 pt-2 text-center">Sample for asterisks</h1>
+
+<div class="main-center p-2">
+
+    <form id="loginForm" class="shadow">
+
+        <fieldset class="border border-dark p-3 shadow">
+            <legend class="float-none w-auto px-1" id="description">
+                <span class="fw-bold ps-1 pe-1">Login</span>
+            </legend>
+
+            <div class="mb-3">
+                <label for="usersEmail" class="form-label" style="color: #af190d !important;">
+                    <img src="wwwroot/images/redAsterisk.svg" alt="required"/>Email address
+                </label>
+                <input type="email" class="form-control" id="usersEmail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="usersPassword" class="form-label" style="color: #af190d !important;">
+                    <img src="wwwroot/images/greenAsterisk.svg" alt="password"/>Password
+                </label>
+                <input type="password" class="form-control" id="usersPassword">
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="requiredCheckMark">
+                <label class="form-check-label"
+                       style="color: #af190d !important;"
+                       for="requiredCheckMark">
+                    Check me out
+                </label>
+            </div>
+
+            <button id="post_form" type="submit" class="btn btn-primary">Submit</button>
+
+        </fieldset>
+
+
+    </form>
+</div>
+
+
+
+
+</body>
+</html>
