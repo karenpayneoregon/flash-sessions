@@ -55,7 +55,6 @@ public static class BogusExtensionsLocal
 {
     public static string Prefix2(this Name name, Name.Gender gender)
     {
-        var test = name.FirstName();
         if (gender == Name.Gender.Male)
         {
             return name.Random.ArrayElement(["Mr.", "Dr."]);
