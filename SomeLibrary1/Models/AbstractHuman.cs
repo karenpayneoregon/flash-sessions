@@ -49,6 +49,18 @@ public class Person : AbstractHuman, INotifyPropertyChanged
     private string _firstName;
     private string _lastName;
     private DateOnly _birthDate;
+    private DateOnly _nothing;
+
+    public DateOnly Nothing
+    {
+        get => _nothing;
+        set
+        {
+            if (value.Equals(_nothing)) return;
+            _nothing = value;
+            OnPropertyChanged();
+        }
+    }
 
     public new int Id
     {

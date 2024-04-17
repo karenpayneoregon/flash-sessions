@@ -33,6 +33,8 @@
 	  <ProjectReference Include="..\SomeLibrary1\SomeLibrary1.csproj" />
 	</ItemGroup>
 
+
+
 	<ItemGroup>
 	  <None Update="appsettings.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

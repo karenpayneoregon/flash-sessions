@@ -9,7 +9,7 @@ internal partial class Program
     {
         string line = new string('-', 40);
 
-        
+
         PersonExample();
         Console.WriteLine(line);
 

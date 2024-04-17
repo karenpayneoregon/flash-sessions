@@ -15,9 +15,9 @@
         {
           "Documents": [
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Classes\\Howdy.cs",
-              "RelativePath": "..\\..\\Week2BlankSlateApp\\Classes\\Howdy.cs",
-              "FullName": "Howdy.cs",
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Interfaces\\IHuman.cs",
+              "RelativePath": "..\\..\\Week2BlankSlateApp\\Interfaces\\IHuman.cs",
+              "FullName": "IHuman.cs",
               "DockedHeight": {
                 "UnitType": "Stretch",
                 "Value": 162
@@ -26,14 +26,14 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 69,
-              "Column": 32,
+              "Line": 5,
+              "Column": 20,
               "IsPinned": false
             },
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\SomeLibrary1\\Models\\Howdy.cs",
-              "RelativePath": "..\\..\\SomeLibrary1\\Models\\Howdy.cs",
-              "FullName": "Howdy.cs",
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Models\\Vietnamese.cs",
+              "RelativePath": "..\\..\\Week2BlankSlateApp\\Models\\Vietnamese.cs",
+              "FullName": "Vietnamese.cs",
               "DockedHeight": {
                 "UnitType": "Stretch",
                 "Value": 162
@@ -42,8 +42,40 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 41,
-              "Column": 52,
+              "Line": 1,
+              "Column": 1,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Models\\Russian.cs",
+              "RelativePath": "..\\..\\Week2BlankSlateApp\\Models\\Russian.cs",
+              "FullName": "Russian.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 6,
+              "Column": 26,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Models\\American.cs",
+              "RelativePath": "..\\..\\Week2BlankSlateApp\\Models\\American.cs",
+              "FullName": "American.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 1,
+              "Column": 1,
               "IsPinned": false
             },
             {
@@ -58,16 +90,8 @@
                 "UnitType": "Stretch",
                 "Value": 200
               },
-              "Line": 94,
-              "Column": 2,
-              "Breakpoints": [
-                {
-                  "IsEnabled": true,
-                  "Line": 16,
-                  "Condition": "",
-                  "ConditionType": "WhenTrue"
-                }
-              ],
+              "Line": 29,
+              "Column": 23,
               "IsPinned": false,
               "IsActive": true,
               "IsSelected": true

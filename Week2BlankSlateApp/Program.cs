@@ -1,4 +1,6 @@
-﻿using Week2BlankSlateApp.Classes;
+﻿using System.Text;
+using Week2BlankSlateApp.Interfaces;
+using Week2BlankSlateApp.Models;
 
 namespace Week2BlankSlateApp;
 
@@ -13,6 +15,25 @@ internal partial class Program
             new Russian() { FirstName = "Kira", LastName = "Sokolov" }
         ];
 
+
+        var result = humans.FirstOrDefault(x => x is Russian);
+        if (result is not null)
+        {
+
+        }
+        else
+        {
+            Console.WriteLine("Nothing");
+        }
+
+        Sample1(humans);
+
+
+        Console.ReadLine();
+    }
+
+    private static void Sample1(List<IHuman> humans)
+    {
         const int typeIndent = -15;
 
         foreach (var human in humans)
@@ -31,74 +52,5 @@ internal partial class Program
             }
 
         }
-
-
-        Console.ReadLine();
     }
-}
-
-
-
-
-
-
-
-
-public enum Language
-{
-    American,
-    Russian,
-    Vietnamese,
-    Netural
-}
-
-public interface IHuman
-{
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public DateOnly BirthDate { get; set; }
-    protected abstract Language Language { get; }
-    public abstract string SayTimeOfDay { get; }
-}
-
-public class Human : IHuman
-{
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public DateOnly BirthDate { get; set; }
-    public Language Language => Language.Netural;
-    public string SayTimeOfDay
-        => Language.SayHello();
-}
-
-internal class American : IHuman
-{
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public DateOnly BirthDate { get; set; }
-    public Language Language => Language.American;
-    public  string SayTimeOfDay
-        => Language.SayHello();
-}
-
-internal class Russian : IHuman
-{
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public DateOnly BirthDate { get; set; }
-    public Language Language => Language.Russian;
-    public string SayTimeOfDay
-        => Language.SayHello();
-}
-
-internal class Vietnamese : IHuman
-{
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public DateOnly BirthDate { get; set; }
-    public Language Language => Language.Vietnamese;
-    public string SayTimeOfDay
-        => Language.SayHello();
 }
