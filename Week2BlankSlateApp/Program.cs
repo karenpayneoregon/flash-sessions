@@ -17,17 +17,17 @@ internal partial class Program
 
         foreach (var human in humans)
         {
-            if (human is Vietnamese)
+            if (human is Vietnamese V)
             {
-                AnsiConsole.MarkupLine($"[yellow3_1]{human.GetType().Name,typeIndent} {human.FirstName} says {human.SayTimeOfDay}[/]");
+                AnsiConsole.MarkupLine($"[yellow3_1]{V.GetType().Name,typeIndent} {V.FirstName} says {V.SayTimeOfDay}[/]");
             }
-            else if (human is American usa)
+            else if (human is American U)
             {
-                AnsiConsole.MarkupLine($"[lightcoral]{usa.GetType().Name,typeIndent} {usa.FirstName} says {usa.SayTimeOfDay}[/]");
+                AnsiConsole.MarkupLine($"[lightcoral]{U.GetType().Name,typeIndent} {U.FirstName} says {U.SayTimeOfDay}[/]");
             }
-            else if (human is Russian)
+            else if (human is Russian R)
             {
-                AnsiConsole.MarkupLine($"[chartreuse3]{human.GetType().Name,typeIndent} {human.FirstName} says {human.SayTimeOfDay}[/]");
+                AnsiConsole.MarkupLine($"[chartreuse3]{R.GetType().Name,typeIndent} {R.FirstName} says {R.SayTimeOfDay}[/]");
             }
 
         }
@@ -36,6 +36,13 @@ internal partial class Program
         Console.ReadLine();
     }
 }
+
+
+
+
+
+
+
 
 public enum Language
 {
