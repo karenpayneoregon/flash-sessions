@@ -17,17 +17,17 @@ internal partial class Program
 
         foreach (var human in humans)
         {
-            if (human is Vietnamese V)
+            if (human is Vietnamese v)
             {
-                AnsiConsole.MarkupLine($"[yellow3_1]{V.GetType().Name,typeIndent} {V.FirstName} says {V.SayTimeOfDay}[/]");
+                AnsiConsole.MarkupLine($"[yellow3_1]{v.GetType().Name,typeIndent} {v.FirstName} says {v.SayTimeOfDay}[/]");
             }
-            else if (human is American U)
+            else if (human is American u)
             {
-                AnsiConsole.MarkupLine($"[lightcoral]{U.GetType().Name,typeIndent} {U.FirstName} says {U.SayTimeOfDay}[/]");
+                AnsiConsole.MarkupLine($"[lightcoral]{u.GetType().Name,typeIndent} {u.FirstName} says {u.SayTimeOfDay}[/]");
             }
-            else if (human is Russian R)
+            else if (human is Russian r)
             {
-                AnsiConsole.MarkupLine($"[chartreuse3]{R.GetType().Name,typeIndent} {R.FirstName} says {R.SayTimeOfDay}[/]");
+                AnsiConsole.MarkupLine($"[chartreuse3]{r.GetType().Name,typeIndent} {r.FirstName} says {r.SayTimeOfDay}[/]");
             }
 
         }
