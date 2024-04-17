@@ -2,4 +2,4 @@
 
 global using ConsoleHelperLibrary.Classes;
 global using Spectre.Console;
-global using Person = BasicsFrontendApp.Models.Person;
+//global using Person = BasicsFrontendApp.Models.Person;

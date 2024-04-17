@@ -9,20 +9,35 @@ internal partial class Program
     {
         string line = new string('-', 40);
 
+        
         PersonExample();
         Console.WriteLine(line);
 
         EmployeeExample();
         Console.WriteLine(line);
 
-
         ManagerExample();
 
+        Console.WriteLine();
         AnsiConsole.MarkupLine("[cyan]Abstract Class Example[/]");
-        Human[] humans = [new American() {FirstName = "Mary"}, new Russian() {FirstName = "Kira" }];
+        
+        Human[] humans = 
+            [
+                new American() {FirstName = "Mary", LastName = "Smith"}, 
+                new Russian() {FirstName = "Kira", LastName = "Sokolov"}
+            ];
+
         foreach (var human in humans)
         {
-            Console.WriteLine($"{human.GetType().Name,-10} {human.FirstName} says {human.SayTimeOfDay}");
+            if (human is American usa)
+            {
+                AnsiConsole.MarkupLine($"[lightcyan3]{usa.GetType().Name,-10}[/] {usa.FirstName} says {usa.SayTimeOfDay}");
+            }
+            else
+            {
+                AnsiConsole.MarkupLine($"[indianred]{human.GetType().Name,-10}[/] {human.FirstName} says {human.SayTimeOfDay}");
+            }
+            
         }
 
 

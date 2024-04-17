@@ -1,5 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
-using BasicsFrontendApp.Models;
+using BasicLibrary.Models;
 
 namespace BasicsFrontendApp.Classes.Helpers;
 
@@ -51,7 +51,7 @@ public static class SpectreConsoleHelpers
     }
 
     /// <summary>
-    /// Used to present a list of <see cref="Taxpayer"/> in a table
+    /// Used to present a list of <see cref="BasicLibrary.Models.Taxpayer"/> in a table
     /// </summary>
     /// <param name="list">One or more taxpayers</param>
     public static void ShowTaxpayers(List<Taxpayer> list)

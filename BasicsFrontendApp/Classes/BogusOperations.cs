@@ -1,5 +1,5 @@
-﻿using BasicsFrontendApp.Models;
-
+﻿
+using BasicLibrary.Models;
 using Bogus;
 using static Bogus.Randomizer;
 using Bogus.Extensions.UnitedStates;
@@ -16,14 +16,14 @@ namespace BasicsFrontendApp.Classes;
 internal class BogusOperations
 {
     /// <summary>
-    /// Creates a consistent list of <see cref="Taxpayer"/>
+    /// Creates a consistent list of <see cref="BasicLibrary.Models.Taxpayer"/>
     /// </summary>
     /// <param name="count">How many to create, if not passed the default is five</param>
     /// <returns>List of Taxpayers</returns>
     /// <remarks>
     /// Seed is set to 338 to ensure consistent results
     /// </remarks>
-    public static List<Taxpayer> TaxpayerList(int count = 5)
+    public static List<Taxpayer> TaxpayerList(int count = 15)
     {
 
         Seed = new Random(338);

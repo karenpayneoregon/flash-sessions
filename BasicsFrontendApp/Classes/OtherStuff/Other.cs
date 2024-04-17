@@ -1,7 +1,7 @@
 ﻿using BasicsFrontendApp.Classes.Helpers;
-using BasicsFrontendApp.Models;
 using Newtonsoft.Json;
 using System.Xml;
+using BasicLibrary.Models;
 
 namespace BasicsFrontendApp.Classes.OtherStuff;
 
@@ -11,34 +11,34 @@ namespace BasicsFrontendApp.Classes.OtherStuff;
 internal class Other
 {
     /// <summary>
-    /// Given a list of <see cref="Taxpayer"/> creates an XML file
+    /// Given a list of <see cref="BasicLibrary.Models.Taxpayer"/> creates an XML file
     /// </summary>
     /// <param name="taxpayersList">List with at least one record</param>
     private static void ConvertDataToXml(List<Taxpayer> taxpayersList)
     {
         string json = JsonConvert.SerializeObject(
             taxpayersList, Newtonsoft.Json.Formatting.Indented, new TaxpayerJsonConverter(typeof(Taxpayer)));
+
         ConvertJsonToXml(json);
         SpectreConsoleHelpers.ShowTaxpayers(taxpayersList);
     }
-    public static void ConvertJsonToXml(string text)
+    public static void ConvertJsonToXml(string json)
     {
-
-        string json = $$"""
-                            {
-                                '?xml': {
-                                '@version': '1.0',
-                                '@standalone': 'no'
-                            },
-                            'Taxpayers':
-                            {
-                                'Taxpayer':
-                                 {{text}}
-                              }
-                            }
-                        """;
-
-        XmlDocument doc = JsonConvert.DeserializeXmlNode(json)!;
+        
+        XmlDocument doc = JsonConvert.DeserializeXmlNode(
+            $$"""
+            {
+                '?xml': {
+                '@version': '1.0',
+                '@standalone': 'no'
+            },
+            'Taxpayers':
+            {
+                'Taxpayer':
+                 {{json}}
+              }
+            }
+            """)!;
         doc.Save("People.xml");
     }
 }

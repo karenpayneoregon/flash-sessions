@@ -1,4 +1,4 @@
-﻿namespace BasicsFrontendApp.Interfaces;
+﻿namespace BasicLibrary.Interfaces;
 
 public interface ITaxpayer : IHuman
 {

@@ -1,4 +1,4 @@
-﻿namespace BasicsFrontendApp.Interfaces;
+﻿namespace BasicLibrary.Interfaces;
 public interface IAddress
 {
     public int Id { get; set; }

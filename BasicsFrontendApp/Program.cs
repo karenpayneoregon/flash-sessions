@@ -1,15 +1,19 @@
-﻿using BasicsFrontendApp.Classes;
-using BasicsFrontendApp.Models;
-using BasicsFrontendApp.Classes.Helpers;
+﻿using  BasicLibrary.Models;
+using BasicsFrontendApp.Classes;
 
-namespace BasicsFrontendApp;
-
-internal partial class Program
+namespace BasicsFrontendApp
 {
-    static void Main(string[] args)
+    internal partial class Program
     {
-        List<Taxpayer> taxpayersList= BogusOperations.TaxpayerList();
-        SpectreConsoleHelpers.ShowTaxpayers(taxpayersList);
-        Console.ReadLine();
+        static void Main(string[] args)
+        {
+            var taxpayerList = BogusOperations.TaxpayerList();
+
+            foreach (var taxpayer in taxpayerList)
+            {
+                // do some work
+            }
+        }
     }
 }
+

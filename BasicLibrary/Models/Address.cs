@@ -1,6 +1,6 @@
-﻿using BasicsFrontendApp.Interfaces;
+﻿using BasicLibrary.Interfaces;
 
-namespace BasicsFrontendApp.Models;
+namespace BasicLibrary.Models;
 
 public class Address : IAddress
 {

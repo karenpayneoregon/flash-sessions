@@ -1,4 +1,4 @@
-﻿namespace BasicsFrontendApp.Models;
+﻿namespace BasicLibrary.Models;
 
 public enum Gender
 {

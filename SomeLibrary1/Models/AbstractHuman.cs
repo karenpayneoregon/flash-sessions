@@ -30,11 +30,18 @@ public abstract class AbstractHuman
 
     public virtual string GetFullName() 
         => $"{FirstName} {LastName}"; // has no clue what FirstName and LastName are 🙄
+
+
 }
 
 /// <summary>
 /// A class which inherits from an abstract class must implement all abstract members
 /// and provides change notification using <see cref="INotifyPropertyChanged"/>.
+/// 
+/// <see cref="INotifyPropertyChanged"/> when added will require
+///    event PropertyChangedEventHandler
+///    void OnPropertyChanged
+/// In many cases sample from the web are done wrong
 /// </summary>
 public class Person : AbstractHuman, INotifyPropertyChanged
 {
@@ -119,6 +126,7 @@ public class Person : AbstractHuman, INotifyPropertyChanged
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+    public override string ToString() => $"{FirstName} {LastName}";
 }
 
 public class Employee : Person

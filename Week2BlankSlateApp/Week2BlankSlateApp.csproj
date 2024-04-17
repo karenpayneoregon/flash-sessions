@@ -21,12 +21,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Bogus" Version="35.5.0" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<PackageReference Include="ConsoleHelperLibrary" Version="1.0.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -37,14 +32,6 @@
 	  <None Update="appsettings.json">
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Other\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\BasicLibrary\BasicLibrary.csproj" />
 	</ItemGroup>
 
 </Project>

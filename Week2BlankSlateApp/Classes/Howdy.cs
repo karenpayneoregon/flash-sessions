@@ -1,51 +1,33 @@
 ﻿#nullable disable
 
-/*
- * There are several classes in this file, for a real
- * project, one class/model per file.
- */
-
 using static System.DateTime;
 
-namespace SomeLibrary1.Models;
-
-
-/// <summary>
-/// Recognized spoken languages for <see cref="Howdy"/> methods.
-/// </summary>
-public enum Language
-{
-    American,
-    Russian,
-    Vietnamese
-}
+namespace Week2BlankSlateApp.Classes;
 
 /// <summary>
 /// Provides a method to say hello in different languages.
 /// </summary>
-public class Howdy
+public static class Howdy
 {
     /// <summary>
     /// Say hello in different languages.
     /// </summary>
     /// <param name="language"><see cref="Language"/></param>
     /// <returns>Greeting for time of day</returns>
-    public static string SayHello(Language language) =>
+    public static string SayHello(this Language language) =>
         /*
          * 💡 This is a switch expression which should only be used when
          * an entire team understand them.
          */
         language switch
         {
-            Language.American => AmericanTimeOfDay(),
-            Language.Russian => RussianTimeOfDay(),
+            Language.American   => AmericanTimeOfDay(),
+            Language.Netural    => AmericanTimeOfDay(),
+            Language.Russian    => RussianTimeOfDay(),
+            Language.Vietnamese => VietnameseTimeOfDay(),
             _ => "Unknown language" // could throw an exception instead
         };
 
-
-    /*
-     * The following two methods use switch expressions.
-     */
 
     /// <summary>
     /// Say time of day in English
@@ -69,5 +51,17 @@ public class Howdy
         <= 16 => "dobryy den'",
         <= 20 => "dobryy vecher",
         _     => "Spokoynoy nochi"
+    };
+
+    /// <summary>
+    /// Say time of day in Russian
+    /// </summary>
+    /// <returns>a string saying a greeting for time of day in Russian</returns>
+    public static string VietnameseTimeOfDay() => Now.Hour switch
+    {
+        <= 12 => "Chào buổi sáng",
+        <= 16 => "Cha\u0300o buô\u0309i chiê\u0300u",
+        <= 20 => "Chào buổi tối",
+        _ => "Chúc ngủ ngon"
     };
 }
