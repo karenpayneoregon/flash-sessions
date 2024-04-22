@@ -16,7 +16,7 @@ showPasswordBtn.addEventListener("click", () => {
 // string password validation
 
 let validationRegex = [
-    { regex: /.{24,}/ }, // min 8 letters,
+    { regex: /.{14,}/ }, // min 8 letters,
     { regex: /[0-9]/ }, // numbers from 0 to 9
     { regex: /[a-z]/ }, // letters from a - z (lowercase)
     { regex: /[A-Z]/ }, // letters from A-Z (uppercase),

@@ -7,6 +7,6 @@ public interface IHuman
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public DateOnly BirthDate { get; set; }
-    protected abstract Language Language { get; }
-    public abstract string SayTimeOfDay { get; }
+    protected Language Language { get; }
+    public string Hello { get; }
 }

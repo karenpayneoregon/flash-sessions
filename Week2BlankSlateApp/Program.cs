@@ -8,49 +8,50 @@ internal partial class Program
 {
     static void Main(string[] args)
     {
-        List<IHuman> humans =
-        [
-            new American() { FirstName = "Mary", LastName = "Smith" },
-            new Vietnamese() { FirstName = "Mai", LastName = "Hai" },
-            new Russian() { FirstName = "Kira", LastName = "Sokolov" }
-        ];
+        var humans = GetAllHumans();
 
 
-        var result = humans.FirstOrDefault(x => x is Russian);
-        if (result is not null)
+        foreach (var human in PatternMatching())
         {
-
-        }
-        else
-        {
-            Console.WriteLine("Nothing");
-        }
-
-        Sample1(humans);
+            Console.WriteLine($"{human.FirstName} says {human.Hello}");
+        };
 
 
         Console.ReadLine();
     }
 
-    private static void Sample1(List<IHuman> humans)
+    private static List<IHuman> GetAllHumans()
     {
-        const int typeIndent = -15;
+        List<IHuman> humans =
+        [
+            new American() { FirstName = "Mary", LastName = "Smith", BirthDate = new DateOnly(1956,1,1)},
+            new Vietnamese() { FirstName = "Mai", LastName = "Hai" },
+            new Russian() { FirstName = "Kira", LastName = "Sokolov" }
+        ];
 
-        foreach (var human in humans)
+        return humans;
+    }
+
+    private static IEnumerable<IHuman> PatternMatching()
+    {
+
+        var humans = GetAllHumans();
+
+        foreach (IHuman human in humans)
         {
             if (human is Vietnamese v)
             {
-                AnsiConsole.MarkupLine($"[yellow3_1]{v.GetType().Name,typeIndent} {v.FirstName} says {v.SayTimeOfDay}[/]");
+                yield return v;
             }
             else if (human is American u)
             {
-                AnsiConsole.MarkupLine($"[lightcoral]{u.GetType().Name,typeIndent} {u.FirstName} says {u.SayTimeOfDay}[/]");
+                yield return u;
             }
             else if (human is Russian r)
             {
-                AnsiConsole.MarkupLine($"[chartreuse3]{r.GetType().Name,typeIndent} {r.FirstName} says {r.SayTimeOfDay}[/]");
+                yield return r;
             }
-
         }
+
     }
 }

@@ -10,6 +10,6 @@ internal class American : IHuman
     public DateOnly BirthDate { get; set; }
 
     public Language Language => Language.American;
-    public string SayTimeOfDay
+    public string Hello
         => Language.SayHello();
 }

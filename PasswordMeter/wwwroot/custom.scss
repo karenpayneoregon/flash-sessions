@@ -1,0 +1,11 @@
+hr {
+    margin: 8px 0;
+    border: 0;
+    text-align: center;
+
+    &:before {
+        content: "Karen Payne sample";
+        font-size: 25px;
+        color: #4F8BCA;
+    }
+}

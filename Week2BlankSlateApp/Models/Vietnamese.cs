@@ -9,6 +9,6 @@ internal class Vietnamese : IHuman
     public string LastName { get; set; }
     public DateOnly BirthDate { get; set; }
     public Language Language => Language.Vietnamese;
-    public string SayTimeOfDay
+    public string Hello
         => Language.SayHello();
 }

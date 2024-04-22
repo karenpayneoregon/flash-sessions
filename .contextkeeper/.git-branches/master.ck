@@ -15,6 +15,24 @@
         {
           "Documents": [
             {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Program.cs",
+              "RelativePath": "..\\..\\Week2BlankSlateApp\\Program.cs",
+              "FullName": "Program.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 200
+              },
+              "Line": 1,
+              "Column": 1,
+              "IsPinned": false,
+              "IsActive": true,
+              "IsSelected": true
+            },
+            {
               "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Interfaces\\IHuman.cs",
               "RelativePath": "..\\..\\Week2BlankSlateApp\\Interfaces\\IHuman.cs",
               "FullName": "IHuman.cs",
@@ -77,24 +95,6 @@
               "Line": 1,
               "Column": 1,
               "IsPinned": false
-            },
-            {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Program.cs",
-              "RelativePath": "..\\..\\Week2BlankSlateApp\\Program.cs",
-              "FullName": "Program.cs",
-              "DockedHeight": {
-                "UnitType": "Stretch",
-                "Value": 162
-              },
-              "DockedWidth": {
-                "UnitType": "Stretch",
-                "Value": 200
-              },
-              "Line": 29,
-              "Column": 23,
-              "IsPinned": false,
-              "IsActive": true,
-              "IsSelected": true
             }
           ],
           "DockedHeight": {

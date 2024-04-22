@@ -12,7 +12,16 @@
         #user_password {
             flex: 0 1 100px;
         }
-         
+        .container {
+            display: block;
+            text-align: center;
+        }
+        form {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -28,11 +37,12 @@
                 </legend>
 
                 <div class="row">
-                    <div class="col-3 text-end">
-                        <label for="emailAddress" class="form-label">Email address</label>
-                    </div>
+                    <!--<div class="col-md-4">
+                        
+                    </div>-->
 
-                    <div class="col-3 mb-2">
+                    <div class="col mb-2">
+                        <label for="emailAddress" class="form-label">Email address</label>
                         <input type="email"
                                class="form-control"
                                id="emailAddress">
@@ -42,10 +52,11 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-3 text-end">
+                    <!--<div class="col-3 text-end">
+                        
+                    </div>-->
+                    <div class="col">
                         <label for="user_password" class="me-2">Password</label>
-                    </div>
-                    <div class="col-5">
                         <div class="password-input-box">
 
                             <input type="password"
@@ -58,7 +69,7 @@
                                 <h2 class="checklist-title">Password should be</h2>
 
                                 <ul class="checklist">
-                                    <li class="list-item">At least 24 character long</li>
+                                    <li class="list-item">At least 14 character long</li>
                                     <li class="list-item">At least 1 number</li>
                                     <li class="list-item">At least 1 lowercase letter</li>
                                     <li class="list-item">At least 1 uppercase letter</li>
@@ -69,6 +80,14 @@
                     </div>
 
                 </div>
+                
+                <div class="row mt-2">
+                    <div class="col-auto">
+                        <input type="button" id="submitForm" class="btn btn-primary" value="Create account" />
+                    </div>
+                    
+                </div>
+
 
             </fieldset>
 
