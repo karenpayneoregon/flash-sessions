@@ -15,6 +15,7 @@ namespace BasicsFrontendApp.Classes;
 /// </remarks>
 internal class BogusOperations
 {
+
     /// <summary>
     /// Creates a consistent list of <see cref="BasicLibrary.Models.Taxpayer"/>
     /// </summary>
@@ -23,7 +24,7 @@ internal class BogusOperations
     /// <remarks>
     /// Seed is set to 338 to ensure consistent results
     /// </remarks>
-    public static List<Taxpayer> TaxpayerList(int count = 15)
+    public static List<Taxpayer> TaxpayerList(int count = 5)
     {
 
         Seed = new Random(338);

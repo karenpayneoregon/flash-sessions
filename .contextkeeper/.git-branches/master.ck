@@ -15,8 +15,56 @@
         {
           "Documents": [
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Program.cs",
-              "RelativePath": "..\\..\\Week2BlankSlateApp\\Program.cs",
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\BasicsFrontendApp\\BasicsFrontendApp.csproj",
+              "RelativePath": "..\\..\\BasicsFrontendApp\\BasicsFrontendApp.csproj",
+              "FullName": "BasicsFrontendApp.csproj",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 342
+              },
+              "Line": 1,
+              "Column": 1,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\BasicsFrontendApp\\BasicsFrontendApp.csproj",
+              "RelativePath": "..\\..\\BasicsFrontendApp\\BasicsFrontendApp.csproj",
+              "FullName": "BasicsFrontendApp.csproj",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 342
+              },
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\BasicsFrontendApp\\Classes\\BogusOperations.cs",
+              "RelativePath": "..\\..\\BasicsFrontendApp\\Classes\\BogusOperations.cs",
+              "FullName": "BogusOperations.cs",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 342
+              },
+              "Line": 18,
+              "Column": 1,
+              "IsPinned": false,
+              "IsActive": true,
+              "IsSelected": true
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\BasicsFrontendApp\\Program.cs",
+              "RelativePath": "..\\..\\BasicsFrontendApp\\Program.cs",
               "FullName": "Program.cs",
               "DockedHeight": {
                 "UnitType": "Stretch",
@@ -24,76 +72,114 @@
               },
               "DockedWidth": {
                 "UnitType": "Stretch",
-                "Value": 200
+                "Value": 342
               },
-              "Line": 1,
-              "Column": 1,
-              "IsPinned": false,
-              "IsActive": true,
-              "IsSelected": true
-            },
-            {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Interfaces\\IHuman.cs",
-              "RelativePath": "..\\..\\Week2BlankSlateApp\\Interfaces\\IHuman.cs",
-              "FullName": "IHuman.cs",
-              "DockedHeight": {
-                "UnitType": "Stretch",
-                "Value": 162
-              },
-              "DockedWidth": {
-                "UnitType": "Stretch",
-                "Value": 200
-              },
-              "Line": 5,
-              "Column": 20,
+              "Line": 12,
+              "Column": 13,
+              "Breakpoints": [
+                {
+                  "IsEnabled": true,
+                  "Line": 12,
+                  "Condition": "",
+                  "ConditionType": "WhenTrue"
+                }
+              ],
               "IsPinned": false
             },
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Models\\Vietnamese.cs",
-              "RelativePath": "..\\..\\Week2BlankSlateApp\\Models\\Vietnamese.cs",
-              "FullName": "Vietnamese.cs",
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week4_cs\\Program.cs",
+              "RelativePath": "..\\..\\Week4_cs\\Program.cs",
+              "FullName": "Program.cs",
               "DockedHeight": {
                 "UnitType": "Stretch",
                 "Value": 162
               },
               "DockedWidth": {
                 "UnitType": "Stretch",
-                "Value": 200
+                "Value": 342
               },
-              "Line": 1,
+              "Line": 47,
               "Column": 1,
               "IsPinned": false
             },
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Models\\Russian.cs",
-              "RelativePath": "..\\..\\Week2BlankSlateApp\\Models\\Russian.cs",
-              "FullName": "Russian.cs",
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week4_cs\\JavaScript\\Folder\\FileName.cs",
+              "RelativePath": "..\\..\\Week4_cs\\JavaScript\\Folder\\FileName.cs",
+              "FullName": "FileName.cs",
               "DockedHeight": {
                 "UnitType": "Stretch",
                 "Value": 162
               },
               "DockedWidth": {
                 "UnitType": "Stretch",
-                "Value": 200
+                "Value": 342
               },
-              "Line": 6,
-              "Column": 26,
+              "Line": 11,
+              "Column": 1,
               "IsPinned": false
             },
             {
-              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week2BlankSlateApp\\Models\\American.cs",
-              "RelativePath": "..\\..\\Week2BlankSlateApp\\Models\\American.cs",
-              "FullName": "American.cs",
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week4_cs\\Common.cs",
+              "RelativePath": "..\\..\\Week4_cs\\Common.cs",
+              "FullName": "Common.cs",
               "DockedHeight": {
                 "UnitType": "Stretch",
                 "Value": 162
               },
               "DockedWidth": {
                 "UnitType": "Stretch",
-                "Value": 200
+                "Value": 342
+              },
+              "Line": 11,
+              "Column": 1,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week4_cs\\JavaScript\\index.js",
+              "RelativePath": "..\\..\\Week4_cs\\JavaScript\\index.js",
+              "FullName": "index.js",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 342
               },
               "Line": 1,
               "Column": 1,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week4_cs\\Styles\\index.css",
+              "RelativePath": "..\\..\\Week4_cs\\Styles\\index.css",
+              "FullName": "index.css",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 342
+              },
+              "Line": 1,
+              "Column": 1,
+              "IsPinned": false
+            },
+            {
+              "FilePath": "C:\\OED\\DotnetLand\\VS2022\\FlashSessions\\Week4_vb\\Program.vb",
+              "RelativePath": "..\\..\\Week4_vb\\Program.vb",
+              "FullName": "Program.vb",
+              "DockedHeight": {
+                "UnitType": "Stretch",
+                "Value": 162
+              },
+              "DockedWidth": {
+                "UnitType": "Stretch",
+                "Value": 342
+              },
+              "Line": 7,
+              "Column": 7,
               "IsPinned": false
             }
           ],
@@ -103,7 +189,7 @@
           },
           "DockedWidth": {
             "UnitType": "Stretch",
-            "Value": 200
+            "Value": 342
           }
         }
       ],

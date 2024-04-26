@@ -9,11 +9,10 @@ namespace BasicsFrontendApp
         {
             var taxpayerList = BogusOperations.TaxpayerList();
 
-            foreach (var taxpayer in taxpayerList)
-            {
-                // do some work
-            }
+            Console.WriteLine(ObjectDumper.Dump(taxpayerList));
         }
+
+        
     }
 }
 

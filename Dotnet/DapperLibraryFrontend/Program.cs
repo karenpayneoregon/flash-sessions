@@ -33,7 +33,7 @@ internal partial class Program
             LastName = "Doe",
             BirthDate = new DateOnly(2023, 12, 5)
         };
-  
+
         await repo.Add(newPerson);
 
         var anotherPerson = await repo.GetByFirstLastName("May", "Schuster");
