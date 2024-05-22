@@ -11,3 +11,4 @@ public  class Taxpayer : Person, ITaxpayer
     public DateOnly StartDate { get; set; }
     public string EmployerIdentificationNumber { get; set; }
 }
+

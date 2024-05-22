@@ -59,7 +59,6 @@
               "Line": 18,
               "Column": 1,
               "IsPinned": false,
-              "IsActive": true,
               "IsSelected": true
             },
             {

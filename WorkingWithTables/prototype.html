@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asterisk example</title>
+    <style>
+        .asterisk span {
+            vertical-align: sub;
+            font-weight: bold;
+        }
+
+        b {
+            font-size: 12px;
+        }
+
+        .asterisk-label{
+            display: inline-table;
+            vertical-align: middle;
+            position: relative;
+            padding-left: 8px;
+            font-size: 14px;
+        }
+
+        .asterisk-label:before {
+            position: absolute;
+            content: '*';
+            left: 1px; /* Adjust as needed */
+            top: 5px; /* Adjust as needed */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-top: 3em; margin-left: 3em;">
+        <table style="border: cornflowerblue" border="1">
+            <tr class="trStripe" height="24" valign="middle">
+                <td width="5%" align="right">
+                    &nbsp;
+                </td>
+                <td align="left" class="asterisk">
+                    <span style="color: red;">*</span>
+                    <b>Place holder</b>
+                </td>
+            </tr>
+
+            <tr class="trStripe" height="24" valign="middle">
+                <td width="5%" align="right">
+                    &nbsp;
+                </td>
+                <td align="left">
+                    <span style="color: red;">*</span>
+                    <b>Place holder</b>
+                </td>
+            </tr>
+
+            <tr class="trStripe" height="24" valign="middle">
+                <td width="5%" align="right">
+                    &nbsp;
+                </td>
+                <td align="left">
+                    <span class="asterisk-label">
+                        <b>Place holder</b>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

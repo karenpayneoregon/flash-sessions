@@ -1,0 +1,91 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+
+</style>
+
+<div class="container">
+    <h1 class="fs-5">Conditional breakpoints</h1>
+    
+    <div class="tbody-div">
+        <table id="infoTable" class="table table-bordered text-start" data-toggle="table">
+            <thead class="sticky-top bg-white">
+
+            <tr>
+                <th width="160" scope="col">
+                    @Html.DisplayNameFor(model => model.Customers[0].Id)
+                </th>
+                <th width="10" scope="col">
+                    @Html.DisplayNameFor(model => model.Customers[0].FirstName)
+                </th>
+                <th width="5" scope="col">
+                    @Html.DisplayNameFor(model => model.Customers[0].LastName)
+                </th>
+                <th width="10" scope="col">
+                    @Html.DisplayNameFor(model => model.Customers[0].Gender)
+                </th>
+                <th width="10" scope="col">
+                    @Html.DisplayNameFor(model => model.Customers[0].BirthDay)
+                </th>
+                <th width="10" scope="col">
+                    @Html.DisplayNameFor(model => model.Customers[0].Email)
+                </th>
+
+            </tr>
+
+            </thead>
+
+            <tbody>
+            @foreach (var customer in Model.Customers)
+            {
+                
+                <tr>
+                    <td>
+                        
+                        @{
+                            if (true)
+                            {
+                                @Html.DisplayFor(modelItem => customer.Id)
+                            }
+                        }
+                    </td>
+                    <td>
+                        @customer.FirstName
+                    </td>
+                    <td>
+                        @customer.LastName
+                    </td>
+                    <td>
+                        @customer.Gender
+                    </td>
+                    <td>
+                        @customer.BirthDay
+                    </td>
+                    <td>
+                        @customer.Email
+                    </td>
+
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    
+    <form method="post">
+        <div class="row mt-2">
+            <div class="col-auto">
+                <input id="PostForm" 
+                       type="submit" class="btn btn-primary" 
+                       value="Demo" 
+                       asp-page-handler="Demo"/>
+            </div>
+        </div>
+    </form>
+
+
+
+</div>

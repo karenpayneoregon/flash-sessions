@@ -39,3 +39,4 @@ public class TaxpayerJsonConverter : JsonConverter
     public override bool CanRead => false;
     public override bool CanConvert(Type objectType) => _types.Any(t => t == objectType);
 }
+

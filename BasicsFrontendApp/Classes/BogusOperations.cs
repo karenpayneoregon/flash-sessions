@@ -27,7 +27,7 @@ internal class BogusOperations
     public static List<Taxpayer> TaxpayerList(int count = 5)
     {
 
-        Seed = new Random(338);
+        Seed = new Random(339);
         var id = 1;
 
         var faker = new Faker<Taxpayer>()

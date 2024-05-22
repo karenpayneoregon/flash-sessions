@@ -14,7 +14,7 @@ internal class Other
     /// Given a list of <see cref="BasicLibrary.Models.Taxpayer"/> creates an XML file
     /// </summary>
     /// <param name="taxpayersList">List with at least one record</param>
-    private static void ConvertDataToXml(List<Taxpayer> taxpayersList)
+    public static void ConvertDataToXml(List<Taxpayer> taxpayersList)
     {
         string json = JsonConvert.SerializeObject(
             taxpayersList, Newtonsoft.Json.Formatting.Indented, new TaxpayerJsonConverter(typeof(Taxpayer)));
