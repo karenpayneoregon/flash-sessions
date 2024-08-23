@@ -1,0 +1,30 @@
+
+
+/* Makes it clear that a button has focus */
+.btn-default:focus, form button.btn:focus {
+    background-color: forestgreen;
+    color: #ffffff;
+}
+
+
+legend {
+    font-weight: 900;
+    border: solid 1px black;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.oed-required {
+    /* DO NOT CHANGE */
+}

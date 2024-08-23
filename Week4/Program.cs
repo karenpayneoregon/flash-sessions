@@ -1,4 +1,7 @@
-﻿using System.Globalization;
+﻿using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.Globalization;
+using Week4.Classes;
 using static System.Globalization.DateTimeFormatInfo;
 #nullable disable
 namespace Week4;
@@ -7,7 +10,10 @@ internal partial class Program
 {
     static void Main()
     {
-
+        PeopleExample();
+        //UnionExample();
+        Console.ReadLine();
+        return;
         ISet<string> set = new HashSet<string> { "one", "two", "three" };
         RunRight(set,"three", "four");
         set.ToList().ForEach(Console.WriteLine);
@@ -17,6 +23,64 @@ internal partial class Program
         RunWrong(set, "six", "seven");
         set.ToList().ForEach(Console.WriteLine);
         Console.ReadLine();
+    }
+
+    private static void PeopleExample()
+    {
+        List<Person> list =
+        [
+            new() { Id = 1, FirstName = "Karen", LastName = "Payne", BirthDate = new DateOnly(1956,9,24)},
+            new() { Id = 2, FirstName = "Sam", LastName = "Smith", BirthDate = new DateOnly(1976,3,4) },
+            new() { Id = 1, FirstName = "Karen", LastName = "Payne", BirthDate = new DateOnly(1956,9,24) }
+        ];
+
+        List<Person> list1 =
+        [
+            new() { Id = 1, FirstName = "Karen", LastName = "Payne", BirthDate = new DateOnly(1956,9,24)},
+            new() { Id = 2, FirstName = "Sam", LastName = "Smith", BirthDate = new DateOnly(1976,3,4) },
+            new() { Id = 3, FirstName = "Frank", LastName = "Adams", BirthDate = new DateOnly(1966,3,4) },
+            new() { Id = 1, FirstName = "Karen", LastName = "Payne", BirthDate = new DateOnly(1956,9,24) }
+        ];
+
+        ISet<Person> set = new HashSet<Person>(list);
+
+        foreach (var person in list)
+        {
+            set.Add(person);
+        }
+
+        //var overlaps = set.Overlaps(list1);
+
+        //var firstOrDefault = set.FirstOrDefault(x => x.FirstName == "Karen");
+        //firstOrDefault.FirstName = "Kate";
+
+        foreach (var person in set)
+        {
+            Console.WriteLine(person);
+        }
+
+        var test = set.ToImmutableList();
+    }
+
+    private static void UnionExample()
+    {
+ 
+        ISet<Person> set1 = new HashSet<Person>
+        {
+            new() { Id = 1, FirstName = "Karen", LastName = "Payne", BirthDate = new DateOnly(1956,9,24)},
+            new() { Id = 2, FirstName = "Sam", LastName = "Smith", BirthDate = new DateOnly(1976,3,4) },
+            new() { Id = 1, FirstName = "Karen", LastName = "Payne", BirthDate = new DateOnly(1956,9,24) }
+        };
+
+        ISet<Person> set2 = new HashSet<Person>
+        {
+            new() { Id = 1, FirstName = "Karen", LastName = "Payne", BirthDate = new DateOnly(1956,9,24)},
+            new() { Id = 3, FirstName = "May", LastName = "Gallagher", BirthDate = new DateOnly(1956,9,24)},
+            new() { Id = 4, FirstName = "Sam", LastName = "Smith", BirthDate = new DateOnly(1976,3,4) }
+        };
+
+        set1.UnionWith(set2);
+
     }
 
     private static void RunRight(ISet<string> set, params string[] values)

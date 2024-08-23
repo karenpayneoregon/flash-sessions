@@ -18,6 +18,8 @@ public class IndexModel : PageModel
 
     public void OnPostDemo()
     {
+        
+
         Customers = DataOperations.Instance.Customers;
 
         foreach (var customer in Customers)

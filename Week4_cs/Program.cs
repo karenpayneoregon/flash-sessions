@@ -1,4 +1,7 @@
 ﻿#nullable disable
+using System.Globalization;
+using System.Text.RegularExpressions;
+
 namespace Week4_cs;
 
 internal class Program
@@ -10,54 +13,39 @@ internal class Program
 
     static void Main(string[] args)
     {
-        // declare variable
-        var strFirstName = "Karen";
-        string strLastName = "Payne";
 
-        List<string> someList = ["Karen", "Payne"];
-
-        // loop through list
-        // and print out each item
-        foreach (var item in someList)
+        foreach (var date in RegularExpressionHelpers.ParseDates("07th December 2022 08 December 2022 01st December 2022"))
         {
-            Console.WriteLine(item);
+            Console.WriteLine(date.ToShortDateString());
         }
-
-        ChangeValue();
-        Console.WriteLine(pSomeVar);
-
         Console.ReadLine(); 
     }
 
-    private static void ChangeValue()
-    {
-        pSomeVar = 2;
-    }
-
-    public Program()
-    {
-        DateTime dateTime = new DateTime(1956, 1, 1, 1, 1, 1);
-        DateOnly date = new DateOnly(1956, 1, 1);
-        TimeOnly time = new TimeOnly(13, 1, 2);
-    }
 }
 
-public class SqlStatements
+public static partial class RegularExpressionHelpers
 {
-    public SqlStatements()
+
+    public static IEnumerable<DateTime> ParseDates(string input)
     {
-        //
+        var matches = DatesRegex().Matches(input);
+        var result = new List<DateTime>();
+        var culture = new CultureInfo("en-US");
+
+        foreach (var match in matches.Cast<Match>())
+        {
+            var day = match.Groups["day"].ToString();
+            var month = match.Groups["month"].ToString();
+            var year = match.Groups["year"].ToString();
+            var date = DateTime.ParseExact($"{day}-{month}-{year}", "d-MMMM-yyyy", culture);
+
+            result.Add(date);
+        }
+
+        return result;
     }
-    public string InsertPeople() => 
-        """
-        INSERT INTO dbo.Person
-        (
-            FirstName,
-            LastName,
-            BirthDate
-        )
-        VALUES
-        (@FirstName, @LastName, @BirthDate);
-        SELECT CAST(scope_identity() AS int);
-        """;
+
+    [GeneratedRegex(@"(?<day>\d{1,2})((st)|(nd)|(rd)|(th))? (?<month>[A-Za-z]+) (?<year>\d{4})")]
+    private static partial Regex DatesRegex();
 }
+
