@@ -13,16 +13,11 @@ namespace ConsoleApp1
         /// <param name="args">The command-line arguments.</param>
         static void Main(string[] args)
         {
-            string input = "There are 4 numbers in this string: 40.6, 30, and 10";
+            string input = "There are 4 numbers in this string: 40.6, 30, and 10 11.555";
 
             int[] intNumbers = GetNumbers<int>(input).ToArray();
             double[] doubleNumbers = GetNumbers<double>(input).ToArray();
-
-            // Use the intNumbers and doubleNumbers arrays as needed
-
-            //string text = "My name is [Karen Payne]";
-            //string name = text.ExtractName();
-            //Console.WriteLine(name);
+            Console.WriteLine(string.Join(",", doubleNumbers));
             Console.ReadLine();
         }
 
@@ -49,7 +44,7 @@ namespace ConsoleApp1
                     endIndex += startIndex;
                 }
 
-                ReadOnlySpan<char> numberSpan = span.Slice(startIndex, endIndex - startIndex);
+                var numberSpan = span.Slice(startIndex, endIndex - startIndex);
 
                 if (numberSpan.Length > 0)
                 {

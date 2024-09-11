@@ -14,7 +14,7 @@ internal class Program
     static void Main(string[] args)
     {
 
-        foreach (var date in RegularExpressionHelpers.ParseDates("07th December 2022 08 December 2022 01st December 2022"))
+        foreach (var date in RegularExpressionHelpers.ParseDates("07th December 2022 08 December 2024 01st December 2022"))
         {
             Console.WriteLine(date.ToShortDateString());
         }
@@ -29,14 +29,14 @@ public static partial class RegularExpressionHelpers
     public static IEnumerable<DateTime> ParseDates(string input)
     {
         var matches = DatesRegex().Matches(input);
-        var result = new List<DateTime>();
+        var result = new List<DateTime>(matches.Count);
         var culture = new CultureInfo("en-US");
 
-        foreach (var match in matches.Cast<Match>())
+        foreach (Match match in matches)
         {
-            var day = match.Groups["day"].ToString();
-            var month = match.Groups["month"].ToString();
-            var year = match.Groups["year"].ToString();
+            var day = match.Groups["day"].Value;
+            var month = match.Groups["month"].Value;
+            var year = match.Groups["year"].Value;
             var date = DateTime.ParseExact($"{day}-{month}-{year}", "d-MMMM-yyyy", culture);
 
             result.Add(date);

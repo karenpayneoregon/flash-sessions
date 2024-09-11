@@ -26,7 +26,7 @@ public static class Howdy
             Language.Netural    => AmericanTimeOfDay(),
             Language.Russian    => RussianTimeOfDay(),
             Language.Vietnamese => VietnameseTimeOfDay(),
-            _ => "Unknown language" // could throw an exception instead
+            _ => AmericanTimeOfDay()
         };
 
 

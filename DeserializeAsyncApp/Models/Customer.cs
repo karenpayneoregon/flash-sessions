@@ -1,7 +1,13 @@
 ﻿#pragma warning disable CS8618
 
 namespace DeserializeAsyncApp.Models;
-public class Customer
+
+public interface IBaseEntity
+{
+    int Id { get; set; }
+}
+
+public class Customer : IBaseEntity
 {
     public int Id { get; set; }
     public string Company { get; set; }

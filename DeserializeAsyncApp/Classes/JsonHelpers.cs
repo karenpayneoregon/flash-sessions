@@ -1,11 +1,11 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
+using DeserializeAsyncApp.Models;
 
 namespace DeserializeAsyncApp.Classes;
 
 internal class JsonHelpers
 {
-
     public static async Task<T> FromStreamAsync<T>(string filePath)
     {
         await using FileStream stream = File.OpenRead(filePath);
@@ -24,10 +24,18 @@ internal class JsonHelpers
         using HttpClient client = new();
         return await client.GetFromJsonAsync<List<T>>(new Uri(url), Options, cancellationToken);
     }
+    public static async Task<T> ReadJson_Async<T>(string url, CancellationToken cancellationToken = default) where T : IBaseEntity
+    {
+        using HttpClient client = new();
+        var customers = await client.GetFromJsonAsync<List<T>>(new Uri(url), Options, cancellationToken);
+        return customers.FirstOrDefault(x => x.Id == 1);
+    }
 
     private static readonly JsonSerializerOptions Options = new(JsonSerializerDefaults.Web);
-
+    
 }
+
+
 
 
 

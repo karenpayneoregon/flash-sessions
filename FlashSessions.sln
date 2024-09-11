@@ -320,7 +320,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DeserializeAsyncApp", "DeserializeAsyncApp\DeserializeAsyncApp.csproj", "{38AE981B-8A6D-48B6-ACE0-6D119582CC93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KP_ConsoleAppNet81", "KP_ConsoleAppNet81\KP_ConsoleAppNet81.csproj", "{94E1BB7C-FC1F-4A68-94FA-EE9F4EF1AC2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KP_ConsoleAppNet81", "KP_ConsoleAppNet81\KP_ConsoleAppNet81.csproj", "{94E1BB7C-FC1F-4A68-94FA-EE9F4EF1AC2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuerySplitting", "QuerySplitting\QuerySplitting.csproj", "{620523D8-866E-4A94-BD01-6B68013EF803}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -440,6 +442,10 @@ Global
 		{94E1BB7C-FC1F-4A68-94FA-EE9F4EF1AC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94E1BB7C-FC1F-4A68-94FA-EE9F4EF1AC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94E1BB7C-FC1F-4A68-94FA-EE9F4EF1AC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{620523D8-866E-4A94-BD01-6B68013EF803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620523D8-866E-4A94-BD01-6B68013EF803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620523D8-866E-4A94-BD01-6B68013EF803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620523D8-866E-4A94-BD01-6B68013EF803}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -478,6 +484,7 @@ Global
 		{7B4DFAA6-5469-4C21-802E-DADD44218767} = {C267679B-2854-4811-A8DF-A10836FC6D8B}
 		{38AE981B-8A6D-48B6-ACE0-6D119582CC93} = {2560446F-AEF0-453D-BEBC-2AC8A809168D}
 		{94E1BB7C-FC1F-4A68-94FA-EE9F4EF1AC2F} = {C267679B-2854-4811-A8DF-A10836FC6D8B}
+		{620523D8-866E-4A94-BD01-6B68013EF803} = {2560446F-AEF0-453D-BEBC-2AC8A809168D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5769EB0C-6D67-43FF-943E-3A3DD94E74D3}
